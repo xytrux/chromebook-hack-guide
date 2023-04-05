@@ -1,98 +1,66 @@
-function sslothable(s, n) {
-    if
-        (
-        (s == 4 && n == 37) ||
-        (s == 5 && n == 38) ||
-        (s == 6 && n == 39) ||
-        (s == 7 && n == 40) ||
-        (s == 8 && n == 41) ||
-        (s == 9 && n == 42) ||
-        (s == 10 && n == 43) ||
-        (s == 11 && n == 43) ||
-        (s == 12 && n == 44) ||
-        (s == 13 && n == 45)
-        ) {
-            return true;
-    }
-    else {
-        return false;
-    }
+const otherArchBoards = ["asurada", "bob", "cherry", "daisy", "daisy-skate", "daisy-spring", "elm", "hana", "jacuzzi", "kevin", "kukui", "nyan-big", "nyan-blaze", "nyan-kitty", "peach-pi", "peach-pit", "scarlet", "strongbad", "trogdor", "veyron-fievel", "veyron-jaq", "veyron-jerry", "veyron-mickey", "veyron-mighty", "veyron-minnie", "veyron-speedy", "veyron-tiger", "x86-alex-he", "x86-mario", "x86-zgb-he"];
+const shimBoards = ["brask", "brya", "clapper", "coral", "dedede", "enguarde", "glimmer", "grunt", "hana", "hatch", "jacuzzi", "kukui", "nami", "octopus", "orco", "pyro", "reks", "sentry", "stout", "strongbad", "tidus", "ultima", "volteer", "zork"];
+const rangeComp = (a, b, c) => {
+    return b <= a && a <= c;
 }
+const prettyNames = {"80": "v80 (v75-83)"};
 
-function sslothablekor(s, n) {
-    if
-        (
-        (s == 4 && n == 33) ||
-        (s == 5 && n == 34) ||
-        (s == 6 && n == 35) ||
-        (s == 7 && n == 35) ||
-        (s == 8 && n == 35) ||
-        (s == 9 && n == 36) ||
-        (s == 10 && n == 37) ||
-        (s == 12 && n == 38) ||
-        (s == 13 && n == 39)
-        ) {
-            return true;
+let canRootBoard = (supplied_board) => {
+    let BOARD = chrome100.find(board => board.target == supplied_board);
+    if (!BOARD) {
+        alert("Invalid board!");
+        return;
     }
-    else {
-        return false;
+    let hasLegacyCrosh = document.getElementById("hasLegacyCrosh").checked,
+        hasCrosh = document.getElementById("hasCrosh").checked,
+        hasCroshBlock99 = document.getElementById("hasCroshBlock99").checked,
+        hasDriveFS = document.getElementById("hasDriveFS").checked,
+        hasARC = document.getElementById("hasARC").checked,
+        hasKiosk = document.getElementById("hasKiosk").checked && BOARD.images.find(image => parseInt(image.params.chrome.split(".")[0]) <= 81);
+    let downgradable = {
+        "80": !!BOARD.images.find(image => rangeComp(parseInt(image.params.chrome.split(".")[0]), 75, 83)),
+        "87": !!BOARD.images.find(image => image.params.chrome.split(".")[0] == "87"),
+        "91": !!BOARD.images.find(image => (image.params.chrome.split(".")[0] == "91" && parseInt(image.params.platform.split(".")[1]) <= 64)),
+        "101": !!BOARD.images.find(image => image.params.chrome.split(".")[0] == "101")
     }
+    let pwnable = Object.assign({"SH1MMER": shimBoards.includes(supplied_board)}, downgradable);
+
+    if (otherArchBoards.includes(supplied_board)) {
+        // maybe these will work in the future?
+        pwnable["87"] = false;
+        pwnable["91"] = false;
+        pwnable["101"] = false;
+    }
+    if (!hasDriveFS) {
+        // same for these
+        pwnable["91"] = false;
+        pwnable["101"] = false;
+    }
+    if (!hasARC) {
+        pwnable["87"] = false;
+    }
+    if (!hasLegacyCrosh && !hasKiosk) {
+        pwnable["80"] = false;
+    }
+    if (!hasCrosh && !hasCroshBlock99) {
+        pwnable["87"] = false;
+        pwnable["91"] = false;
+    }
+    if (!hasCrosh || hasCroshBlock99) {
+        pwnable["101"] = false;
+    }
+    let canRoot = false;
+    var waysToRoot = [];
+    Object.keys(pwnable).forEach(pwn => {
+        if (pwnable[pwn]) {
+            canRoot = true;
+            waysToRoot.push(pwn);
+        }
+    })
+    return waysToRoot;
 }
 
 function redirect() {
-    var major = document.getElementById("major");
-    var minor = document.getElementById("minor");
-    var nver = document.getElementById("nver");
-    var region = document.getElementById("region");
-    document.getElementById("result_invalidVersion").style.display = "none";
-    document.getElementById("result_methodUnavailable").style.display = "none";
-    if (major.value == 0) {
-        document.getElementById("result_invalidVersion").style.display = "block";
-    }
-    else { //only do things if major isnt 0, which would be invalid
-        if (["U", "E", "J"].includes(region.value)) { // USA/EUR/JPN things
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
-                window.location.href = "installing-boot9strap-(soundhax)";
-            }
-            else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-                window.location.href = "installing-boot9strap-(ssloth-browser)";
-            }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
-                window.location.href = "seedminer";
-            }
-        }
-        else if (region.value === "K") { //korea stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
-                window.location.href = "installing-boot9strap-(soundhax)";
-            }
-            else if (sslothablekor(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-                window.location.href = "installing-boot9strap-(ssloth-browser)";
-            }
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
-                window.location.href = "seedminer";
-            }
-        }
-        else if (region.value === "T") { //taiwan stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
-                window.location.href = "installing-boot9strap-(soundhax)";
-            }
-            //else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-            //    window.location.href = "installing-boot9strap-(ssloth-browser)"; //OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
-            //}
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T
-                window.location.href = "seedminer";
-            }
-        }
-        else if (region.value === "C") { //chn stuff
-            if (major.value < 11 || minor.value < 4) { //soundhax works on all consoles for 1.0-11.3
-                window.location.href = "installing-boot9strap-(soundhax)";
-            }
-            //else if (sslothable(minor.value, nver.value)) { //check for versions that are not cartupdated, cartupdated consoles cannot access the browser, see troubleshooting for solution
-            //    window.location.href = "installing-boot9strap-(ssloth-browser)"; //OTHERAPP BROKEN FOR TWN/CHN 11.4+ ATM
-            //}
-            else { //seedminer does still work for the latest version on E/U/J/K/T/C, but can only be chained on E/U/J/K/T, so CHN cannot be modded atm without additional hardware
-                document.getElementById("result_methodUnavailable").style.display = "block";
-            }
-        }
-    }
+    var waysToRoot = canRootBoard(document.getElementById("board").value);
+    console.log(waysToRoot);
 }

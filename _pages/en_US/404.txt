@@ -1,8 +1,8 @@
 ---
 title: "Page Not Found" #
-excerpt: "Page not found. Your pixels are in another canvas." #
+excerpt: "Page not found. Do better, loser." #
 sitemap: false
 ---
 
-Sorry, but the page you were trying to view does not exist.
+Damn bro, that's crazy. It seems that you've been bamboozled. The page you're looking for does not - I repeat - *does not* exist!
 {: .notice--info}
