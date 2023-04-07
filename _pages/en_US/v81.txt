@@ -1,0 +1,7 @@
+---
+title: "v81 Privilege Escalation"
+---
+
+{% include toc title="Table of Contents" %}
+
+TODO: Actually write this guide
