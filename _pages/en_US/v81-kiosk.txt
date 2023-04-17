@@ -1,0 +1,11 @@
+---
+title: "v81 Unenrollment - Kiosk Exploit"
+---
+
+{% include toc title="Table of Contents" %}
+
+## Prerequisites
+
+- A USB drive, 1gb or larger, formatted with FAT32
+
+TODO: write guide
