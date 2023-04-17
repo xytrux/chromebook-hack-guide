@@ -1,5 +1,5 @@
 const otherArchBoards = ["asurada", "bob", "cherry", "daisy", "daisy-skate", "daisy-spring", "elm", "hana", "jacuzzi", "kevin", "kukui", "nyan-big", "nyan-blaze", "nyan-kitty", "peach-pi", "peach-pit", "scarlet", "strongbad", "trogdor", "veyron-fievel", "veyron-jaq", "veyron-jerry", "veyron-mickey", "veyron-mighty", "veyron-minnie", "veyron-speedy", "veyron-tiger", "x86-alex-he", "x86-mario", "x86-zgb-he"];
-const shimBoards = ["brask", "brya", "clapper", "coral", "dedede", "enguarde", "glimmer", "grunt", "hana", "hatch", "jacuzzi", "kukui", "nami", "octopus", "orco", "pyro", "reks", "sentry", "stout", "strongbad", "tidus", "ultima", "volteer", "zork"];
+const shimBoards = ["brask", "brya", "clapper", "coral", "dedede", "enguarde", "glimmer", "grunt", "hana", "hatch", "jacuzzi", "kukui", "nami", "octopus", "orco", "pyro", "reks", "sentry", "stout", "strongbad", "tidus", "ultima", "volteer", "zork", "kindred"];
 const rangeComp = (a, b, c) => {
     return b <= a && a <= c;
 }
@@ -63,7 +63,9 @@ let canRootBoard = (supplied_board) => {
 function redirect() {
     var waysToRoot = canRootBoard(document.getElementById("board").value);
     console.log(waysToRoot);
-    if (waysToRoot.includes("80")) {
+    if (waysToRoot.includes("SH1MMER")){
+      window.location.href="https://chromebook-guide.github.io/sh1mmer"
+    } else if (waysToRoot.includes("80")) {
       window.location.href="https://chromebook-guide.github.io/v81";
     } else if (waysToRoot.includes("87")) {
       window.location.href="https://chromebook-guide.github.io/v87";
@@ -71,8 +73,7 @@ function redirect() {
       window.location.href="https://chromebook-guide.github.io/v91";
     } else if (waysToRoot.includes("101")) {
       window.location.href="https://chromebook-guide.github.io/v101";
-    } else if (waysToRoot.includes("SH1MMER")) {
-      // sh1mmer is sort of a last resort type exploit, it's easily patchable and not most devices can run it anymore
-      window.location.href="https://chromebook-guide.github.io/sh1mmer"
+    } else {
+      alert("No exploits are available for your platform :(");
     }
 }
