@@ -47,5 +47,8 @@ Follow the setup instructions for your Chromebook. It should go through the norm
 If you see a terminal, continue to [v81 Unenrollment - Crosh](v81-crosh)
 {: .notice--success}
 
-If you see a block page, continue to [v81 Unenrollment - Kiosk Exploit](v81-kiosk)
+If you see a block page and had a kiosk app earlier, continue to [v81 Unenrollment - Kiosk Exploit](v81-kiosk)
 {: .notice--primary}
+
+Otherwise, your Chromebook is unable to continue on this guide. Sorry.
+{: .notice--warning}
