@@ -26,7 +26,29 @@ mac-randomizer.sh
 q
 ```
 
-## Section III - Finished!
+## Section III - Disable Admin-Installed Extensions
+
+Select "Hard Disable Extensions" and, at the prompt, enter the extension ID corresponding to the extension you want to disable (only applies for murkmod, fakemurk alone will allow you to disable only a few of these extensions):
+
+- GoGuardian - `haldlgldplgnggkjaafhelgiaglafanh`
+- Securly - `iheobagjkfklnlikgihanlhcddjoihkg`
+- OrbitNote - `feepmdlmhplaojabeoecaobfmibooaid`
+- Screenshot reader - `enfolipbjmnmleonhhebhalojdpcpdoo`
+- Read and Write for Google Chrome - `inoeonmfapjbbkmdafoankkfajkcphgd`
+- Gopher Buddy - `cgbbbjmgdpnifijconhamggjehlamcif`
+- Clever Plus - `dikiaagfielfbnbbopidjjagldjopbpa`
+- LightSpeed - `adkcpkpghahmbopkjchobieckeoaoeem`
+- Cisco Umbrella - `jcdhmojfecjfmbdpchihbeilohgnbdci`
+- ContentKeeper Authenticator - `jdogphakondfdmcanpapfahkdomaicfa`
+- Hapara - `aceopacgaepdcelohobicpffbbejnfac`
+- iboss - `kmffehbidlalibfeklaefnckpidbodff`
+- LightSpeed Classroom - `jaoebcikabjppaclpgbodmmnfjihdngk`
+- Blocksi - `ghlpmldmjjhmdgmneoaibbegkjjbonbk`
+- Linewize - `ddfbkhpmcdbciejenfcolaaiebnjcbfc`
+- Securly Classroom - `jfbecfmiegcjddenjhlbhlikcbfmnafd`
+- Impero - `jjpmjccpemllnmgiaojaocgnakpmfgjg`
+
+## Section IV - Finished!
 
 You're done with the guide! Congrats! At the end of the year, you'll need to [Re-Enroll your Device](re-enroll)
 {: .notice--success}
