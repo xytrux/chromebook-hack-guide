@@ -64,14 +64,15 @@ function redirect() {
     var waysToRoot = canRootBoard(document.getElementById("board").value);
     console.log(waysToRoot);
     if (waysToRoot.includes("80")) {
-      window.location.href="https://rainestorme.github.io/chromebooks/v81";
+      window.location.href="https://chromebook-guide.github.io/v81";
     } else if (waysToRoot.includes("87")) {
-      window.location.href="https://rainestorme.github.io/chromebooks/v87";
+      window.location.href="https://chromebook-guide.github.io/v87";
     } else if (waysToRoot.includes("91")) {
-      window.location.href="https://rainestorme.github.io/chromebooks/v91";
+      window.location.href="https://chromebook-guide.github.io/v91";
     } else if (waysToRoot.includes("101")) {
-      window.location.href="https://rainestorme.github.io/chromebooks/v101";
+      window.location.href="https://chromebook-guide.github.io/v101";
     } else if (waysToRoot.includes("SH1MMER")) {
-      window.location.href="https://rainestorme.github.io/chromebooks/sh1mmer"
+      // sh1mmer is sort of a last resort type exploit, it's easily patchable and not most devices can run it anymore
+      window.location.href="https://chromebook-guide.github.io/sh1mmer"
     }
 }
