@@ -38,6 +38,16 @@ Download [Rufus](https://rufus.ie/) and run the executable. Select the .bin file
 
 Download [Etcher](https://www.balena.io/etcher) and run the excutable. Select the .bin file and your USB drive. Click on flash and follow the prompts.
 
+## Section II - Enable Developer Mode and Re-Enroll
+
+This part is pretty simple. Just enable developer mode if you haven't already (`Esc+Refresh+Power`, `Ctrl+D`, reboot, `Ctrl+D` to boot) and open a crosh tab (`Ctrl+Alt+T`). Run the following commands:
+
+```sh
+shell
+sudo su
+vpd -i RW_VPD -s check_enrollment=1
+```
+
 ## Section II - Disable Developer Mode and Recover
 
 Reboot your device (`Refresh+Power`). At the developer mode warning screen, press `Space` and then `Enter` to disable developer mode. Then, press and hold `Esc+Refresh+Power` and plug in your recovery drive. Wait for recovery to finish, then reboot and set up the device normally with an enterprise account.
