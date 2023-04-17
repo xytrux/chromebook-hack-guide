@@ -28,5 +28,5 @@ q
 
 ## Section III - Finished!
 
-You're done with the guide! Congrats! At the end of the year, you'll need to [Re-Enroll your Device]()
+You're done with the guide! Congrats! At the end of the year, you'll need to [Re-Enroll your Device](re-enroll)
 {: .notice--success}
