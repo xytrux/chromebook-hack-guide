@@ -27,16 +27,8 @@ Before starting this guide, we first have to check some key information about yo
 1. Log out of your device (`Ctrl+Shift+Q` twice)
 1. Look at the bottom left of the screen for an "Apps" option. Remember if this option is there.
 
-#### Section III - Select a Method
+#### Section IIII - Select a Method
 
-To find the correct method for your device, please enter the system version you found in Section II.
+To find the correct exploit method for your device, please enter the system version you found in Sections I, II, and III.
 
-{% capture invalidVersion %}
-This isn't right - you seem to have entered an invalid version.
-{% endcapture %}
-
-{% capture methodUnavailable %}
-Unfortunantly, your Chromebook cannot be hacked with the methods in this guide. Cope.
-{% endcapture %}
-
-{% include consoleVersionSelect.html invalidVersion=invalidVersion methodUnavailable=methodUnavailable %}
+{% include consoleVersionSelect.html %}
