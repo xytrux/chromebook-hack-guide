@@ -43,7 +43,7 @@ Download [Etcher](https://www.balena.io/etcher) and run the excutable. Select th
 
 ## Section IV - Boot SH1MMER
 
-Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then, press `Ctrl+D`. At the next screen, press `Refresh+Power`. Now, plug in your USB drive and press `Esc+Refresh+Power` again. After a short loading screen, the SH1MMER menu should load.
+Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then, press `Ctrl+D`. At the next screen, press `Refresh+Power`. Now, plug in your USB drive and press `Esc+Refresh+Power` again. After a short loading screen, the SH1MMER menu should load. 
 
 ## Section V - Unenroll
 
