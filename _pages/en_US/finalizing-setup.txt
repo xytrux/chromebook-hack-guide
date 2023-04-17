@@ -1,0 +1,32 @@
+---
+title: "Finalizing Setup"
+---
+
+{% include toc title="Table of Contents" %}
+
+## Section I - Disable Extensions (if neccecary)
+
+You can skip this step if you already installed murkmod.
+
+Try to open crosh (`Ctrl+Alt+T`). If you can't open crosh due to an extension block, then create a new folder in your Downloads named `disable-extensions`. Fakemurk will automagically disable extensions so you can use crosh.
+
+## Section II - Install Reccomended Murkmod Plugins
+
+This section is only appliccable if you installed murkmod.
+{: .notice--info}
+
+Open crosh (`Ctrl+Alt+T`) and select "Install Plugins". Type the following lines at the prompt, one at a time:
+
+```
+mrchromebox-fwscript.sh
+neofetch.sh
+wallpaper.sh
+wssocks.sh
+mac-randomizer.sh
+q
+```
+
+## Section III - Finished!
+
+You're done with the guide! Congrats! At the end of the year, you'll need to [Re-Enroll your Device]()
+{: .notice--success}
