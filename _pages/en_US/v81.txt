@@ -50,5 +50,8 @@ If you see a terminal, continue to [v81 Unenrollment - Crosh](v81-crosh)
 If you see a block page and had a kiosk app earlier, continue to [v81 Unenrollment - Kiosk Exploit](v81-kiosk)
 {: .notice--primary}
 
+If you see a terminal at this stage, you can optionally continue to [Running cedr](cedr) instead of unenrolling
+{: .notice--primary}
+
 Otherwise, your Chromebook is unable to continue on this guide. Sorry.
 {: .notice--warning}
