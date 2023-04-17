@@ -54,7 +54,7 @@ Your device will now behave as a normal, personal device would, free of any rest
 Your administrator wil be able to see that your device is "offline", and you should spend as little time as possible in this state if you are not authorized to be following this tutorial.
 {: .notice--danger}
 
-## Section III - Next Steps
+## Section VI - Next Steps
 
 If you want to re-enroll but keep your Chromebook unrestricted, continue to [fakemurk](fakemurk)
 {: .notice--success}
