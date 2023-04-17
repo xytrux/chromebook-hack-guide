@@ -27,7 +27,7 @@ Before starting this guide, we first have to check some key information about yo
 1. Log out of your device (`Ctrl+Shift+Q` twice)
 1. Look at the bottom left of the screen for an "Apps" option. Remember if this option is there.
 
-#### Section IIII - Select a Method
+#### Section IV - Select a Method
 
 To find the correct exploit method for your device, please enter the system version you found in Sections I, II, and III.
 
