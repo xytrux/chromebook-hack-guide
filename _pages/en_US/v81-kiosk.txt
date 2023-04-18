@@ -46,7 +46,14 @@ Run the following command:
 vpd -i RW_VPD -s check_enrollment=0
 ```
 
-Now, press `Ctrl+Shift+Q` two times to log out, and press `Ctrl+Shift+Alt+R` to trigger a powerwash. Follow the prompts, and reboot if neccecary. After powerwashing, your Chromebook will behave like a personal device and will be completely unrestricted.
+Now, we need to powerwash the device to fully unenroll. Run the following commands:
+
+```sh
+echo "fast safe" >/mnt/stateful_partition/factory_install_reset
+reboot
+```
+
+After powerwashing, your Chromebook will behave like a personal device and will be completely unrestricted.
 
 Your administrator wil be able to see that your device is "offline", and you should spend as little time as possible in this state if you are not authorized to be following this tutorial.
 {: .notice--danger}
