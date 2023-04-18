@@ -63,10 +63,11 @@ let canRootBoard = (supplied_board) => {
 function redirect() {
     var waysToRoot = canRootBoard(document.getElementById("board").value);
     console.log(waysToRoot);
-    if (waysToRoot.includes("SH1MMER")){
-      window.location.href="https://chromebook-guide.github.io/sh1mmer"
-    } else if (waysToRoot.includes("80")) {
+    if (waysToRoot.includes("80")){
       window.location.href="https://chromebook-guide.github.io/v81";
+    } else if (waysToRoot.includes("SH1MMER")){
+      // v81 provides more options then sh1mmer, sh1mmer is more of a second-best option here
+      window.location.href="https://chromebook-guide.github.io/sh1mmer"
     } else if (waysToRoot.includes("87")) {
       window.location.href="https://chromebook-guide.github.io/v87";
     } else if (waysToRoot.includes("91")) {
