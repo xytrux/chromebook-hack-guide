@@ -52,3 +52,6 @@ Select "Hard Disable Extensions" and, at the prompt, enter the extension ID corr
 
 You're done with the guide! Congrats! At the end of the year, you'll need to [Re-Enroll your Device](re-enroll)
 {: .notice--success}
+
+Also check out the [What Now?](what-now) guide
+{: .notice--info}
