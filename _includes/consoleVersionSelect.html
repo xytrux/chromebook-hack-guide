@@ -1,12 +1,11 @@
-<div id="selectversion" class="selectversion" style="display:none">
-    <br>
-    Board name: <input id="board" type="text" width="350px" placeholder="reks, lars, octopus, etc."/>
-    <input type="checkbox" id="hasLegacyCrosh" checked> Can visit chrome-extension://nkoccljplnhpfnfiajclkommnmllphnl//html/crosh.html <i>(ignore extension blocks)</i><br />
-		<input type="checkbox" id="hasCrosh" checked> Can visit crosh (chrome-untrusted://crosh) <i>(ignore extension blocks)</i><br />
-		<input type="checkbox" id="hasCroshBlock99"> chrome-untrusted://crosh is blocked with "Application blocked by your administrator" (not "crosh is blocked")<br />
-		<input type="checkbox" id="hasDriveFS" checked> Has Google Drive files in the file manager app<br />
-		<input type="checkbox" id="hasARC" checked> Has Google Play/Android/ARC enabled<br />
-    <input type="checkbox" id="hasKiosk" checked> Has at least one kisok app enabled<br />
+<div id="selectversion" class="selectversion" style="display:none; padding: 20px;">
+    Board name: <input id="board" type="text" width="250px" placeholder="reks, lars, octopus, etc."/>
+    <input type="checkbox" id="hasLegacyCrosh" checked style="font-size: 14px;"> Can visit chrome-extension://nkoccljplnhpfnfiajclkommnmllphnl//html/crosh.html <i>(ignore extension blocks)</i><br />
+    <input type="checkbox" id="hasCrosh" checked style="font-size: 14px;"> Can visit crosh (chrome-untrusted://crosh) <i>(ignore extension blocks)</i><br />
+    <input type="checkbox" id="hasCroshBlock99" style="font-size: 14px;"> chrome-untrusted://crosh is blocked with "Application blocked by your administrator" (not "crosh is blocked")<br />
+    <input type="checkbox" id="hasDriveFS" checked style="font-size: 14px;"> Has Google Drive files in the file manager app<br />
+    <input type="checkbox" id="hasARC" checked style="font-size: 14px;"> Has Google Play/Android/ARC enabled<br />
+    <input type="checkbox" id="hasKiosk" checked style="font-size: 14px;"> Has at least one kiosk app enabled<br />
     <br>
     <input type="button" onclick="redirect()" value="Confirm">
 </div>
