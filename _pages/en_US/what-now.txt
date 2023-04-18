@@ -55,3 +55,7 @@ In mush, select option 13 to install Crouton. After 15 minutes or so of loading,
 Then, back in mush, select option 14 to start Crouton. Wait about 30 seconds, and you'll be dropped into a shiny new XFCE desktop environment.
 
 To switch back and forth between desktops, press `Ctrl+Shift+Alt+Back` and `Ctrl+Shift+Alt+Forward`.
+
+## Abuse Root Access
+
+You can easily pop open a root shell or a shell as the `chronos` user (which has sudo access) and mess with the system in virtually any way imaginable. If you're dedicated enough, you can download a prebuilt copy of gcc and make and build and install various pieces of software to your system.
