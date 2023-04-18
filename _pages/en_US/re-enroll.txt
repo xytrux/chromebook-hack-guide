@@ -4,6 +4,9 @@ title: "Re-Enrolling"
 
 {% include toc title="Table of Contents" %}
 
+If you followed the guide as reccomended, you should have installed fakemurk, which means that you can just select the "Emergency Revert and Re-Enroll" option in mush and go on with your day.
+{: .notice--info}
+
 ## Prerequisites
 
 - A USB drive, 8gb or larger, for recovery
