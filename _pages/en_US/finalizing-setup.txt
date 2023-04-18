@@ -28,6 +28,9 @@ q
 
 ## Section III - Disable Admin-Installed Extensions
 
+Hard-disabling and hard-enabling extensions is a time-consuming process. If you're under surveilance unpredictably, y[]ou might want to be able to quickly toggle on and off certain extensions. Leave these extensions hard-enabled, then see the [LtBEEF Guide](ltbeef)
+{: .notice--info}
+
 Select "Hard Disable Extensions" and, at the prompt, enter the extension ID corresponding to the extension you want to disable (only applies for murkmod, fakemurk alone will allow you to disable only a few of these extensions):
 
 - GoGuardian - `haldlgldplgnggkjaafhelgiaglafanh`
