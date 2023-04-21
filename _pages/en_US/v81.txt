@@ -45,6 +45,9 @@ Got your drive? Great! Unplug it from your computer and insert it into your Chro
 
 ## Section III - Determining Next Steps
 
+If you are unable to log into the Chromebook for any number of reasons (maybe you bought the Chromebook from a reseller and it wasn't unenrolled) you can skip directly to the [Kiosk Exploit](v81-kiosk)
+{: .notice--info}
+
 Follow the setup instructions for your Chromebook. It should go through the normal stages, and show an "Enterprise Enrollment" screen. Wait for it to complete, then sign in normally. Once you're signed in, press `Ctrl+Alt+T` to open crosh.
 
 If you see a terminal, continue to [v81 Unenrollment - Crosh](v81-crosh)
