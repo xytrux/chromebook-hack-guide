@@ -23,8 +23,14 @@ neofetch.sh
 wallpaper.sh
 wssocks.sh
 mac-randomizer.sh
+fakeapk.sh
 q
 ```
+
+FakeAPK is an incredibly useful tool when it comes to fakemurked Chromebooks. If you chose not to install murkmod, then you can install it with:
+`sudo curl -LOk https://raw.githubusercontent.com/clockworkindustries/FakeAPK/main/fakeapk.sh && sudo bash fakeapk.sh
+` from a root shell.
+{: .notice--info}
 
 ## Section III - Disable Admin-Installed Extensions
 
@@ -34,7 +40,7 @@ Hard-disabling and hard-enabling extensions is a time-consuming process. If you'
 Select "Hard Disable Extensions" and, at the prompt, enter the extension ID corresponding to the extension you want to disable (only applies for murkmod, fakemurk alone will allow you to disable only a few of these extensions):
 
 - GoGuardian - `haldlgldplgnggkjaafhelgiaglafanh`
-- Securly - `iheobagjkfklnlikgihanlhcddjoihkg`
+- Securly - `iheobagjkfklnlikgihanlhcddjoihkg` (webstore extension) or `joflmkccibkooplaeoinecjbmdebglab` (non-webstore extension)
 - OrbitNote - `feepmdlmhplaojabeoecaobfmibooaid`
 - Screenshot reader - `enfolipbjmnmleonhhebhalojdpcpdoo`
 - Read and Write for Google Chrome - `inoeonmfapjbbkmdafoankkfajkcphgd`
@@ -51,7 +57,19 @@ Select "Hard Disable Extensions" and, at the prompt, enter the extension ID corr
 - Securly Classroom - `jfbecfmiegcjddenjhlbhlikcbfmnafd`
 - Impero - `jjpmjccpemllnmgiaojaocgnakpmfgjg`
 
-## Section IV - Finished!
+## Section IV - Install RW_LEGACY firmware
+
+Select Plugins (option 4 in murkmodded mush) and select "Run MrChromebox's firmware utility script". After a short bit of loading, it will present you with a menu that looks like this:
+
+![]({{ "./images/mrchromeboxfw.png" | absolute_url }})
+
+Select option 1, and the firmware will be installed. Then, press `Q` to quit.
+
+## Section V - Setup APK installation and AuroraStore
+
+Select Plugins and select "Install/Uninstall FakeAPK". At the menu, select `1` (Enable FakeAPK). When prompted, press enter to reboot. Upon rebooting, sign back in and download the [Aurora Store APK](https://gitlab.com/AuroraOSS/AuroraStore/uploads/bbc1bd5a77ab2b40bbf288ccbef8d1f0/AuroraStore_4.1.1.apk). Find it in your Downloads folder and double-click it. After a short wait, it will prompt you to confirm installing an "unsecure app". Click Continue, and installation will commence. Confirm installation if prompted, and then launch the Aurora Store app from your launcher (press the `Search` key). It will prompt you to perform initial configuration. Leave the default value for everything (except the color theme, feel free to mess with that). When prompted to log in, just select "Log in with Google" and sign in with your home account.
+
+## Section VI - Finished!
 
 You're done with the guide! Congrats! At the end of the year, you'll need to [Re-Enroll your Device](re-enroll)
 {: .notice--success}
