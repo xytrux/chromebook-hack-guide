@@ -70,3 +70,7 @@ To switch back and forth between desktops, press `Ctrl+Shift+Alt+Back` and `Ctrl
 ## Abuse Root Access
 
 You can easily pop open a root shell or a shell as the `chronos` user (which has sudo access) and mess with the system in virtually any way imaginable. If you're dedicated enough, you can download a prebuilt copy of gcc and make and build and install various pieces of software to your system. Murkmod contains a work-in-progress installer for Chromebrew, but it is still broken as-is.
+
+## Torrent ~~Pirated~~ Perfectly Legitimate Content
+
+If you installed AuroraStore, you can search up "LibreTorrent". LibreTorrent is a free and open source torrent client for Android that runs beautifully on a Chromebook. It also supports socks5 proxies, meaning that if your enterprise WiFi blocks torrent connections, you can still connect correctly.
