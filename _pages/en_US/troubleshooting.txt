@@ -2,4 +2,66 @@
 title: "Troubleshooting"
 ---
 
-There's nothing here. No help for you, skid.
+{% include toc title="Table of Contents" %}
+
+## Get started
+
+Seriously, how did you run into an issue *here*? Make an issue on the GitHub repo for more help.
+
+## Downgrading (Any Version)
+
+### Help! I don't have a personal computer with admin permissions and the Chromebook Recovery Utility extension is blocked!
+
+Either get a friend to help you or else you're out of luck. Sorry, skid.
+
+### I don't have a USB drive, can you send one to me?
+
+No.
+
+### My USB drive is less than 8gb. Will it still work?
+
+No.
+
+## Root Escalation (Any Version)
+
+### No red prompt appears after running the root exploit
+
+You are SOL. Recover again. Try again. Do better next time.
+
+### `set_cellular_ppp` outputs "No Cellular Service Exists"
+
+Either you're on a version where the `set_cellular_ppp` bug is patched or something else got messed up. Try downgrading again.
+
+## Root Escalation (v81 - Kiosk)
+
+### I can't find my USB drive to load CHRWN from
+
+Reboot. Try again.
+
+## Sh1mmer
+
+### "This USB drive does not contain ChromeOS" upon trying to boot the shim
+
+Either you've upgraded past v112 (at which point sh1mmer is patched) or you downloaded the shim for the wrong board.
+
+## LtBEEF
+
+### The script isn't running on any page.
+
+Either the site that LtBEEF is being loaded from is blocked, in which case you're SOL, or you're on the wrong page. Keep in mind that LtBEEF needs to be run on:
+
+`https://chrome.google.com/webstorex`.
+
+## Murkmod
+
+### Installing/Updating error: Read-only Filesystem
+
+Try recovering, unenrolling, then fakemurking and murkmodding again.
+
+## Depthboot
+
+Troubleshooting for Depthboot coming soon.
+
+## cedr
+
+Also coming soon.
