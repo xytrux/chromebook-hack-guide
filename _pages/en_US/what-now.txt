@@ -38,11 +38,22 @@ serialization-util.sh
 
 Then, open the serialization utility from the plugins menu. Provide a new serial number where prompted, and your device will reboot.
 
-## Boot from a USB
+## Boot from a USB (RW_LEGACY)
+
+This is the old method of booting from a USB. Although this is compatible with most Linux distros, it might not work on Chromebook hardware. See the section below this one for other instructions.
+{: .notice--info}
 
 Open MrChromebox's Firmware Utility from the plugins menu. After a short bit of loading (20 seconds or so), you'll be presented with a menu. If you want to boot from a USB drive, all you should need to do is install the RW/LEGACY firmware, and, optionally, the full UEFI firmware as well.
 
 Then, reboot your device (`Refresh+Power`) and press `Ctrl+L` at the developer mode warning screen, with a USB drive plugged in.
+
+## Boot from a USB (Depthboot)
+
+Follow the instructions [here](https://eupnea-linux.github.io/docs/depthboot/requirements) to build Depthboot for your Chromebook. Make sure to input your board codename and not your `stable-channel` value into the automatic device finder. Make sure to skip step 5 and 6 of the build instructions, those will be covered here.
+
+Got everything built? Great! Now, open mush (this one is for murkmod only) and select option `15` - "Enable dev_boot_usb". Now, reboot with the USB drive plugged in (`Refresh+Power`) and press `Ctrl+U`.
+
+What's that? You just want to install Linux and overwrite ChromeOS? Gee, if only there were [a guide for that exact purpose](depthboot)... oh well.
 
 ## Override Admin-Set Wallpaper
 
@@ -58,4 +69,4 @@ To switch back and forth between desktops, press `Ctrl+Shift+Alt+Back` and `Ctrl
 
 ## Abuse Root Access
 
-You can easily pop open a root shell or a shell as the `chronos` user (which has sudo access) and mess with the system in virtually any way imaginable. If you're dedicated enough, you can download a prebuilt copy of gcc and make and build and install various pieces of software to your system.
+You can easily pop open a root shell or a shell as the `chronos` user (which has sudo access) and mess with the system in virtually any way imaginable. If you're dedicated enough, you can download a prebuilt copy of gcc and make and build and install various pieces of software to your system. Murkmod contains a work-in-progress installer for Chromebrew, but it is still broken as-is.
