@@ -31,7 +31,7 @@ On a ChromeOS device in developer mode, you can also use the following instructi
 Good choice of operating system, by the way. Most distros will come with the `dd` utility built-in. If yours doesn't, then choose a different distro or find a way to flash the recovery image. Run the following command, making sure that you have the correct /dev path to your USB drive and the correct path to your recovery image:
 
 ```sh
-dd if=/path/to/recovery-image.bin of=/dev/sdX
+dd if=/path/to/recovery-image.bin of=/dev/sdX status=progress
 ```
 
 In a few minutes, you should be done, and the command should exit with a 0 exit code.
