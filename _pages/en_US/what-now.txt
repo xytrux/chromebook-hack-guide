@@ -74,3 +74,7 @@ You can easily pop open a root shell or a shell as the `chronos` user (which has
 ## Torrent ~~Pirated~~ Perfectly Legitimate Content
 
 If you installed AuroraStore, you can search up "LibreTorrent". LibreTorrent is a free and open source torrent client for Android that runs beautifully on a Chromebook. It also supports socks5 proxies, meaning that if your enterprise WiFi blocks torrent connections, you can still connect correctly.
+
+## Visit Restricted Sites
+
+Using Crouton, you can swap over to a full Linux desktop running XFCE. Within it, you can install firefox (`sudo apt install firefox-esr`) and then set the proxy settings to point towards wssocks (`127.0.0.1` on port `1080`).
