@@ -88,7 +88,7 @@ Download the files to your downloads folder in a directory called `newdevicesett
 
 ```sh
 sed -i 's/CHROMEOS_RELEASE_TRACK=stable-channel/CHROMEOS_RELEASE_TRACK=testimage-channel/g' /etc/lsb-release
-``
+```
 
 Now, we need to relaunch /opt/google/chrome/chrome with the required launch flag, `--disable-policy-key-verification`. To do so, we'll use a method originally found by TitaniumNetwork, which in effect is a simple bash script to kill and relaunch the process with new command-line flags.
 
