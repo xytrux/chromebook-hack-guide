@@ -49,21 +49,35 @@ Download [Etcher](https://www.balena.io/etcher) and run the excutable. Select th
 
 Set this recovery USB drive aside for later. You're probably gonna need it.
 
-## Section II - Fakemurking
+## Section II - Double and Triple-Checking
+
+Make sure you've done everything on this handy little checklist:
+
+- Enabled developer mode
+- Updated to v105
+- Created a v105 recovery drive
+
+Last chance: **MAKE SURE YOUR DEVICE IS ON V105!**
+{: .notice--warning}
+
+## Section III - Fakemurking
 
 Once logged in, press `Ctrl+Alt+T` to open crosh again. At the prompt, run the following commands:
 
 ```sh
 shell
 sudo su
-bash <(curl -SLk https://github.com/MercuryWorkshop/fakemurk/releases/latest/download/fakemurk.sh)
+bash <(curl -SLk https://github.com/MercuryWorkshop/fakemurk/releases/download/1.1.0/fakemurk.sh)
 ```
 
-## Section III - Recovery (if needed)
+Warning: fakemurk v1.2.0 has a high chance of bricking your device's firmware. THis guide uses v1.1.0, which does not have those issues.
+{: .notice--warning}
+
+## Section IV - Recovery (if needed)
 
 If you fakemurked and saw an error of **any kind**, then you'll need to recover and retry. Press `Esc+Refresh+Power` for a second, and plug in your recovery drive. Wait for recovery to finish, then run the above steps again.
 
-## Section IV - Fixing Enrollment Certificate Errors
+## Section V - Fixing Enrollment Certificate Errors
 
 Once your device reboots (make sure to press `Ctrl+D` at boot) there's a good chance that you'll be stuck at an enrollment screen for a while, then it'll complain about a missing certificate. Don't worry, this is normal!
 
@@ -73,7 +87,7 @@ This will result in a "ChromeOS is missing or damaged" screen. This is also norm
 
 After a short(er) wait, you should be able to enroll.
 
-## Section V - Next Steps
+## Section VI - Next Steps
 
 I highly reccomend that you install murkmod, which allows for plugins to be installed to a fakemurked device. Just continue to [Installing Murkmod](murkmod)
 {: .notice--success}
