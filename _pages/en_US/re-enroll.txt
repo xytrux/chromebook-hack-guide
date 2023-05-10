@@ -54,11 +54,11 @@ sudo su
 vpd -i RW_VPD -s check_enrollment=1
 ```
 
-## Section II - Disable Developer Mode and Recover
+## Section III - Disable Developer Mode and Recover
 
 Reboot your device (`Refresh+Power`). At the developer mode warning screen, press `Space` and then `Enter` to disable developer mode. Then, press and hold `Esc+Refresh+Power` and plug in your recovery drive. Wait for recovery to finish, then reboot and set up the device normally with an enterprise account.
 
-## Section III - Finished!
+## Section IV - Finished!
 
 You're done with the guide! Your Chromebook now has no trace of following this guide. Return it at the end of the year, and go on with your life.
 {: .notice--success}
