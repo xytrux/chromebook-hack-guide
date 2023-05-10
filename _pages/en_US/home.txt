@@ -14,6 +14,9 @@ excerpt: "An exploit guide and wiki for a wide variety of chromebook exploits an
 Thoroughly read all of the introductory pages (including this one!) before proceeding.
 {: .notice--info}
 
+Warning: Downgrading through the typical recovery method is patched on v112 and over. Read the [full PSA](recovery-patched) for more information.
+{: .notice--warning}
+
 ## What does this guide do and install?
 
 This guide will:
