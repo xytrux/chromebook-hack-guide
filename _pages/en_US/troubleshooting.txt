@@ -22,6 +22,10 @@ No.
 
 No.
 
+### Recovery outputs something about the drive being outdated
+
+This means that, at some point, you've updated to v112 or higher. A workaround will come out in a few weeks (as of May 11th, 2023).
+
 ## Root Escalation (Any Version)
 
 ### No red prompt appears after running the root exploit
