@@ -50,6 +50,14 @@ Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then
 
 ## Section V - Unenroll
 
+If you were on a version >111 and disabled WP, you will need to run some commands before anything will work. Otherwise, just past these pargraphs and unenroll normally. Open a bash shell (Utilities > Bash Shell) and run the following command:
+
+```sh
+futility gbb --flash -s --flags=0x8090
+```
+
+This will set the GBB (Google Binary Block) flags on your system to allow unenrollment and devmode.
+
 Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we're after is "Un-Enroll Device". Select it and reboot your device (`Esc+Refresh`). Then, unplug your USB drive and setup your device as normal.
 
 Your device will now behave as a normal, personal device would, free of any restrictions.
