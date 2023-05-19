@@ -50,17 +50,26 @@ Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then
 
 ## Section V - Unenroll
 
-If you were on a version >111 and disabled WP, you will need to run some commands before anything will work. Otherwise, just past these pargraphs and unenroll normally. Open a bash shell (Utilities > Bash Shell) and run the following command:
+Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we're after is "Un-Enroll Device". Select it and reboot your device (`Esc+Refresh`). 
+
+If you were on a version >111 and disabled WP, you will need to run some commands before anything will work. Otherwise, just skip past these pargraphs and unenroll normally. Open a bash shell (Utilities > Bash Shell) and run the following commands:
 
 ```sh
-futility gbb --flash -s --flags=0x8090
+/usr/share/vboot/bin/set_gbb_flags.sh 0x8090
+flashrom --wp-disable
+sudo vpd -i RW_VPD -s check_enrollment=0
+sudo vpd -i RW_VPD -s block_devmode=0
+sudo crossystem block_devmode=0
 ```
 
-This will set the GBB (Google Binary Block) flags on your system to allow unenrollment and devmode.
+Reboot, and boot into developer mode (`Esc+Refresh+Power` and `Ctrl+D`). Immediately, powerwash the device (`Ctrl+Alt+Shift+R`). After powerwashing, immediately switch into VT2 (Virtual Terminal 2) the second the device begins to boot (`Ctrl+Alt+Forward`). If asked for a username, type `root` and press enter. Now run the following commands, as shown by [this meme](https://akkoma.mercurywork.shop/media/8fdafa97b393dd32ba00c94a488e6b653d005b79820ed0ba802174a44c66c649.png):
 
-Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we're after is "Un-Enroll Device". Select it and reboot your device (`Esc+Refresh`). Then, unplug your USB drive and setup your device as normal.
+```sh
+tpm_manager_client take_ownership
+cryptohome --action=remove_firmware_management_parameters
+```
 
-Your device will now behave as a normal, personal device would, free of any restrictions.
+Finally, switch back to OOBE (`Ctrl+Alt+Back`) and powerwash (again). After powerwashing, you should be completely unenrolled and be able to use your device without any restrictions.
 
 Your administrator wil be able to see that your device is "offline", and you should spend as little time as possible in this state if you are not authorized to be following this tutorial.
 {: .notice--danger}
