@@ -20,7 +20,7 @@ If you have a CR50 model (2017+), your device could fall into multiple categorie
 - Battery-tied (from up to mid-2021) - your WP is tied to whether or not the battery is connected
 - Jumper-based (from 2021 and onward) - your WP is controlled by an unpopulated jumper on the board
 
-A quick google-search will tell you what category your device falls into, based on its release date.
+A quick google-search will tell you what category your device falls into, based on its release date. You can also check [MrChromebox's Page](https://mrchromebox.tech/#devices) for more information.
 
 ## Section II - Next Steps
 
