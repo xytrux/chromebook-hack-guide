@@ -64,9 +64,9 @@ function redirect() {
     var waysToRoot = canRootBoard(document.getElementById("board").value);
     console.log(waysToRoot);
     if (waysToRoot.includes("SH1MMER") && document.getElementById("curVersion").value >= 112) {
-      window.location.href="https://chromebook-guide.github.io/identify-wp";
+      window.location.href="https://chromebook-guide.github.io/choose-halcyon";
     } else if (document.getElementById("curVersion").value >= 112){
-      alert("No exploits are available for your platform, since you're updated past v112. A workaround will be released by MercuryWorkshop in the coming weeks. Check back soon :)");
+      alert("No exploits are available for your platform, since you're updated past v112 and are incompatible with SH1MMER.");
       return;
     }
     if (waysToRoot.includes("80")){
