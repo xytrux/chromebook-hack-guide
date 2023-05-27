@@ -17,6 +17,7 @@ Your device is compatible with two exploit chains - E-Halcyon and traditional WP
     + Requires a USB drive at every boot to startup, will display "ChromeOS is missing or damaged" if E-Halcyon is installed in semi-tethered mode
     + Won't "phone home" to GAC - you'll have to recover every couple of days for device information to updated if that's a concern for you
     + User data isn't saved between reboots due to cryptohome issues
+    + Requires a Linux system to build
 + WP-disabled Unenrollment + fakemurk (murkmod)
   + Pros
     + Spoofs enrollment, will update GAC data without sending devmode status
