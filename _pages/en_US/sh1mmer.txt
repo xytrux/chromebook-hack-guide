@@ -52,6 +52,8 @@ Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then
 
 Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we're after is "Un-Enroll Device". Select it and reboot your device (`Esc+Refresh`). 
 
+If you're continuing to use E-Halcyon, ignore any errors that appear running the utility.
+
 If you were on a version >111 and disabled WP, you will need to run some commands before anything will work. Otherwise, just skip past these pargraphs and unenroll normally. Open a bash shell (Utilities > Bash Shell) and run the following commands:
 
 ```sh
@@ -75,6 +77,9 @@ Your administrator wil be able to see that your device is "offline", and you sho
 {: .notice--danger}
 
 ## Section VI - Next Steps
+
+If you're using E-Halcyon, continue to [Booting E-Halcyon](halcyon)
+{: .notice--success}
 
 If you want to re-enroll but keep your Chromebook unrestricted, continue to [fakemurk](fakemurk)
 {: .notice--success}
