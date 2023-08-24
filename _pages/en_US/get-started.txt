@@ -14,6 +14,9 @@ Before starting this guide, we first have to check some key information about yo
     ![]({{ "./images/find-board-stable-channel.png" | absolute_url }})
     {: .notice--info}
 
+If chrome://version is blocked, just hold down `Esc+Refresh+Power` until the recovery screen shows up, and then press `Tab`. At the very top of the text that appears should be your board name.
+{: .notice--info}
+
 #### Section II - Crosh Checks
 
 1. Now, we're going to check if various versions of `crosh`, the ChRomeOs developer SHell are accessable on your device.

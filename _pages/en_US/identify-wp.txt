@@ -14,10 +14,10 @@ First, we have to figure out what kind of hardware WP you have on your device, s
 
 If you have a early model (from 2012-2013), your device has a jumper/switch WP.
 
-If you have a pre-CR50 model (from 2014-2017), your device has a WP screw. Chances are, your device falls into this category.
+If you have a pre-CR50 model (from 2014-2017), your device has a WP screw.
 
 If you have a CR50 model (2017+), your device could fall into multiple categories:
-- Battery-tied (from up to mid-2021) - your WP is tied to whether or not the battery is connected
+- Battery-tied (from up to mid-2021) - your WP is tied to whether or not the battery is connected - This is most likely your board if you used one of the publicly leaked shims
 - Jumper-based (from 2021 and onward) - your WP is controlled by an unpopulated jumper on the board
 
 A quick google-search will tell you what category your device falls into, based on its release date. You can also check [MrChromebox's Page](https://mrchromebox.tech/#devices) for more information.

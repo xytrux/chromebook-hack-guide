@@ -14,7 +14,7 @@ excerpt: "An exploit guide and wiki for a wide variety of chromebook exploits an
 Thoroughly read all of the introductory pages (including this one!) before proceeding.
 {: .notice--info}
 
-Warning: Downgrading through the typical recovery method is patched on v112 and over. You can still follow this guide on almost any hardware, but you're limited to E-Halcyon if you aren't willing to take apart your device.
+Warning: Downgrading through the typical recovery method is patched on v112 and over for non-sh1mmerable boards. You can still follow this guide on almost any hardware, but you're limited to E-Halcyon if you aren't willing to take apart your device.
 {: .notice--warning}
 
 ## What does this guide do and install?

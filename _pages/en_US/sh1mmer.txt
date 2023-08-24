@@ -12,8 +12,7 @@ title: "SH1MMER Unenrollment"
 
 You need to download a raw RMA (Return Merchandise Authorization) shim for your board, which you found earlier. There are only a few of these that have been publicly leaked, and this tool automatically filters out boards that are not supported. You can get a shim at the following sites:
 
-- https://files.ultimatesrv.com/
-- https://rainestorme.github.io/chrome81/
+- https://dl.osu.bio/
 
 ## Section II - Add the SH1MMER payload (BeautifulWorld)
 
@@ -58,13 +57,9 @@ If you were on a version >111 and disabled WP, you will need to run some command
 
 ```sh
 /usr/share/vboot/bin/set_gbb_flags.sh 0x8090
-flashrom --wp-disable
-sudo vpd -i RW_VPD -s check_enrollment=0
-sudo vpd -i RW_VPD -s block_devmode=0
-sudo crossystem block_devmode=0
 ```
 
-Reboot, and boot into developer mode (`Esc+Refresh+Power` and `Ctrl+D`). Immediately, powerwash the device (`Ctrl+Alt+Shift+R`). After powerwashing, immediately switch into VT2 (Virtual Terminal 2) the second the device begins to boot (`Ctrl+Alt+Forward`). If asked for a username, type `root` and press enter. Now run the following commands, as shown by [this meme](https://akkoma.mercurywork.shop/media/8fdafa97b393dd32ba00c94a488e6b653d005b79820ed0ba802174a44c66c649.png):
+Reboot, and boot into developer mode (`Ctrl+D`). Immediately, powerwash the device (`Ctrl+Alt+Shift+R`). After powerwashing, immediately switch into VT2 (Virtual Terminal 2) the second the device begins to boot (`Ctrl+Alt+Forward`). If asked for a username, type `root` and press enter, and if asked for a password, type `test0000`. Now run the following commands, as shown by [this masterpiece of a meme](https://akkoma.mercurywork.shop/media/8fdafa97b393dd32ba00c94a488e6b653d005b79820ed0ba802174a44c66c649.png):
 
 ```sh
 tpm_manager_client take_ownership
