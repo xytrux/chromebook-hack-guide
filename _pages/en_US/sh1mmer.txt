@@ -8,11 +8,15 @@ title: "SH1MMER Unenrollment"
 
 - A USB drive, 8gb or larger, for the modified shim
 
+Please note that SH1MMER has been patched for later devices with leaked shims.
+If the shim does not boot, you need to perform BadRecovery.
+{: .notice--danger}
+
 ## Section I - Download a Raw Shim
 
 You need to download a raw RMA (Return Merchandise Authorization) shim for your board, which you found earlier. There are only a few of these that have been publicly leaked, and this tool automatically filters out boards that are not supported. You can get a shim at the following sites:
 
-- https://dl.osu.bio/
+- https://dl.darkn.bio/
 
 ## Section II - Add the SH1MMER payload (BeautifulWorld)
 
@@ -45,11 +49,11 @@ Download [Etcher](https://www.balena.io/etcher) and run the excutable. Select th
 
 ## Section IV - Boot SH1MMER
 
-Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then, press `Ctrl+D`. At the next screen, press `Refresh+Power`. Now, plug in your USB drive and press `Esc+Refresh+Power` again. After a short loading screen, the SH1MMER menu should load. 
+Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then, press `Ctrl+D`. At the next screen, press `Refresh+Power`. Now, plug in your USB drive and press `Esc+Refresh+Power` again. After a short loading screen, the SH1MMER menu should load.
 
 ## Section V - Unenroll
 
-Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we're after is "Un-Enroll Device". Select it and reboot your device (`Esc+Refresh`). 
+Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we're after is "Un-Enroll Device". Select it and reboot your device (`Esc+Refresh`).
 
 If you're continuing to use E-Halcyon, ignore any errors that appear running the utility.
 
