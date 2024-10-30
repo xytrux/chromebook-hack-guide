@@ -16,25 +16,25 @@ Either get a friend to help you or else you're out of luck. Sorry, skid.
 
 ### I don't have a USB drive, can you send one to me?
 
-No.
+Go out and buy one. While you're at it, touch some grass.
 
 ### My USB drive is less than 8gb. Will it still work?
 
-No.
+Yes. Use SH1MMER legacy instead.
 
 ### Recovery outputs something about the drive being outdated
 
-This means that, at some point, you've updated to v112 or higher. A workaround will come out in a few weeks (as of May 11th, 2023).
+This means that, at some point, you've updated to v112 or higher. Use BadRecovery if under 125.
 
-## Root Escalation (Any Version)
+## Root Escalation (>v101)
 
 ### No red prompt appears after running the root exploit
 
-You are SOL. Recover again. Try again. Do better next time.
+Womp Womp. Recover again. Try again. Do better next time.
 
 ### `set_cellular_ppp` outputs "No Cellular Service Exists"
 
-Either you're on a version where the `set_cellular_ppp` bug is patched or something else got messed up. Try downgrading again.
+Either you're on a version where the `set_cellular_ppp` bug is patched (v101 or higher) or something else got messed up. Try downgrading again.
 
 ## Root Escalation (v81 - Kiosk)
 
@@ -48,11 +48,18 @@ Reboot. Try again.
 
 Either you've upgraded past v112 (at which point sh1mmer is patched) or you downloaded the shim for the wrong board.
 
+
+### When I do SH1MMER, it says im using a unoffical image.
+
+HOW. HOW DO YOU CONFUSE A RECOVERY IMAGE WITH A SHIM???? WHY..
+
+..speaking of which, you should've read the instructions for SH1MMER.
+
 ## LtBEEF
 
 ### The script isn't running on any page.
 
-Either the site that LtBEEF is being loaded from is blocked, in which case you're SOL, or you're on the wrong page. Keep in mind that LtBEEF needs to be run on:
+Either the site that LtBEEF is being loaded from is blocked, in which case you're on a version where LtBEEF is patched, or you're on the wrong page. Keep in mind that LtBEEF needs to be run on:
 
 `https://chrome.google.com/webstorex`.
 
