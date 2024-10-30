@@ -1,5 +1,5 @@
 ---
-title: "SH1MMER Unenrollment"
+title: "SH1mmer Unenrollment"
 ---
 
 {% include toc title="Table of Contents" %}
@@ -8,8 +8,8 @@ title: "SH1MMER Unenrollment"
 
 - A USB drive, 8gb or larger, for the modified shim
 
-Please note that SH1MMER has been patched for later devices with leaked shims.
-If the shim does not boot, you need to perform BadRecovery.
+Please note that SH1mmer has been patched for later devices, even if they have leaked shims.
+If the shim does not boot on your target device, you may need to use BadRecovery instead.
 {: .notice--danger}
 
 ## Section I - Download a Raw Shim
@@ -18,9 +18,9 @@ You need to download a raw RMA (Return Merchandise Authorization) shim for your 
 
 - https://dl.darkn.bio/
 
-## Section II - Add the SH1MMER payload (BeautifulWorld)
+## Section II - Add the SH1mmer payload (BeautifulWorld)
 
-Visit the [SH1MMER Web Builder](https://sh1mmer.me/builder.html) and upload your raw shim. Wait a couple of minutes for it to build, then download the result.
+Visit the [SH1mmer Web Builder](https://sh1mmer.me/builder.html) and upload your raw shim. Wait a couple of minutes for it to build, then download the result.
 
 ## Section III - Flash the Shim
 
@@ -47,9 +47,9 @@ Download [Rufus](https://rufus.ie/) and run the executable. Select the .bin file
 
 Download [Etcher](https://www.balena.io/etcher) and run the excutable. Select the .bin file and your USB drive. Click on flash and follow the prompts.
 
-## Section IV - Boot SH1MMER
+## Section IV - Boot SH1mmer
 
-Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then, press `Ctrl+D`. At the next screen, press `Refresh+Power`. Now, plug in your USB drive and press `Esc+Refresh+Power` again. After a short loading screen, the SH1MMER menu should load.
+Boot your Chromebook and press and hold `Esc+Refresh+Power` for one second. Then, press `Ctrl+D`. At the next screen, press `Refresh+Power`. Now, plug in your USB drive and press `Esc+Refresh+Power` again. After a short loading screen, the SH1mmer menu should load.
 
 ## Section V - Unenroll
 

@@ -32,7 +32,7 @@ Your device is compatible with two exploit chains - E-Halcyon and traditional WP
 
 Chosen an exploit chain? Great! Select a next step below.
 
-If you want to boot E-Halcyon or install it in semi-tethered mode, continue to [SH1MMER Unenrollment](sh1mmer)
+If you want to boot E-Halcyon or install it in semi-tethered mode, continue to [SH1mmer Unenrollment](sh1mmer)
 {: .notice--success}
 
 Or, if you want to disable WP and unenroll normally, continue to [Identifying Firmware WP](identify-wp)

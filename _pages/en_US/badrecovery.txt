@@ -5,71 +5,55 @@ title: "BadRecovery/OlyBmmer"
 {% include toc title="Table of Contents" %}
 
 ## Prerequisites
-- A USB drive, preferably 8gb or larger, for the modded recovery image.
+- A USB drive, preferably 8gb or larger, for the patched recovery image.
 
-## Section I - Downloading a Recovery image
+## Section I - Downloading a Recovery Image
 
-First things first, you need to grab a recovery image lower than v125 for your board.
+First, you need a recovery image lower than v125 for your board.
 
 - https://chrome100.dev
 
-## Section II - Mod the Recovery image
+## Section II - Patch the Recovery image
 
-Vist the [BadRecovery Web Bulider](https://binbashbanana.github.io/badrecovery) and upload the RAW recovery image. choose auto and wait a couple of minute and it should download automatically.
+Vist the [BadRecovery Web Bulider](https://binbashbanana.github.io/badrecovery) and upload the unpatched (colloquially: "raw") recovery image. Select `Auto` and wait for the process to complete. The patched image should download automatically.
 
-## Section III - Flashing the image
+## Section III - Flashing the Image
 
-Did it download automatically? Amazing! Please follow the next instructions for
-flashing.
+Now, we need to flash the recovery image to a USB drive. Follow the below steps for your platform:
 
-### Across all platforms (ChromeOS, Mac, Windows, Linux, etc.)
+### On *nix
 
-If you are using a Chromium browser, Download the Chromebook Recovery Utility and click on "Use Local Image" on the dropdown menu.
+On a ChromeOS device in developer mode, you can also use the following instructions to flash the drive. Otherwise, you can download the [Chromebook Recovery Utility]() from the Chrome Webstore and use that to flash the drive. Just click on the top right button in the window and select "Use Local File", then select your .bin file. This probably won't work on an enrolled device, but if the extension is unblocked, you can do it entirely on that Chromebook.
+{: .notice--info}
 
-Select your modded recovery image you made earlier and click Continue.
+Good choice of operating system, by the way. Most distros will come with the `dd` utility built-in. If yours doesn't, then choose a different distro or find a way to flash the recovery image. Run the following command, making sure that you have the correct /dev path to your USB drive and the correct path to your recovery image:
 
-WARNING: All data on this USB will be lost. Consider making a backup of the USB
-if this is the only one laying around you.
-{: .notice--danger}
+```sh
+dd if=/path/to/recovery-image.bin of=/dev/sdX status=progress
+```
 
-Once done, you should plug the USB into your chromebook and hit ESC+REFRESH+POWER.
-Recovery should now start. Sit back and relax until the BadRecovery screen pops up.
+In a few minutes, you should be done, and the command should exit with a 0 exit code.
 
-### Linux
+### On Windows
 
-Run
-```dd if=/path/to/yourmoddedrecoimage.bin of=/dev/sdWHATEVERYOURUSBIS```
+Download [Rufus](https://rufus.ie/) and run the executable. Select the .bin file you just downloaded and select your USB drive. Click on flash and follow the prompts. If asked, select "Flash in DD mode".
 
-MAKE SURE YOU ARE NOT FLASHING TO YOUR INTERNAL DISK! DOING SO WILL
-RESULT IN LOSS OF DATA!
-{: .notice--danger}
+### On MacOS
 
-If all goes well, the command will finish with no errors.
-A 0 exit code is not a error, please ignore that.
-
-### Windows
-Download [Rufus](https://rufus.ie), run the exe and select the raw image. Choose DD mode if prompted. Click START to Continue.
-
-### MacOS
-Download [Etcher](https://www.balena.io/etcher) and run the executable/appimage. Click allow for everything. Select the modded reco image and your USB drive.
+Download [Etcher](https://www.balena.io/etcher) and run the excutable. Select the .bin file and your USB drive. Click on flash and follow the prompts.
 
 ## Section IV - Booting BadRecovery
 
-Unlike SH1MMER, DO NOT enter devmode unless you have a ancient board (pre-CR50).
+Unlike SH1mmer, do not enter devmode unless you have a ancient board (pre-CR50).
 
-Instead simply press ESC+REFRESH+POWER and plug in your USB.
+Instead simply enter recovery normally (`Esc+Refresh+Power`) and plug in your drive. The recovery process should start, and after a while you should get kicked to a BadRecovery screen. Let it remove FWMP and enable dev mode. If it shows a error about tpmc failing to remove FWMP, your Chromebook is incompatible with the exploit. (This issue is not neccesarily common anymore since the latest version patched this.)
 
-The recovery process should start.
-
-After a while you should get kicked to a BadRecovery screen. Let it remove
-FWMP and enable dev mode. If it shows a error of tpmc failing to remove FWMP, your chromebook is incompatible to the exploit. (This issue is not really common anymore since the latest version patched this.)
-
-Now press Refresh and Power.
+Now, perform an EC reset (`Refresh+Power`).
 
 Please note that your admin can see that your device is offline. If you are not allowed to do this, set your kernver to 0 and reenroll using KVS.
 {: .notice--danger}
 
-## Section VI- Postmodem
+## Section VI - Postmodem
 
 If you want to reenroll but want to unenroll at anytime, continue to [kvs](kvs)
 {: .notice--success}

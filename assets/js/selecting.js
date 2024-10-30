@@ -23,7 +23,7 @@ let canRootBoard = (supplied_board) => {
     "91": !!BOARD.images.find(image => (image.params.chrome.split(".")[0] == "91" && parseInt(image.params.platform.split(".")[1]) <= 64)),
     "101": !!BOARD.images.find(image => image.params.chrome.split(".")[0] == "101")
   }
-  let pwnable = Object.assign({ "SH1MMER": shimBoards.includes(supplied_board) }, downgradable);
+  let pwnable = Object.assign({ "SH1mmer": shimBoards.includes(supplied_board) }, downgradable);
 
   if (otherArchBoards.includes(supplied_board)) {
     // maybe these will work in the future?
@@ -63,19 +63,19 @@ let canRootBoard = (supplied_board) => {
 function redirect() {
   var waysToRoot = canRootBoard(document.getElementById("board").value);
   console.log(waysToRoot);
-  if (waysToRoot.includes("SH1MMER") && document.getElementById("curVersion").value >= 111) {
+  if (waysToRoot.includes("SH1mmer") && document.getElementById("curVersion").value >= 111) {
     window.location.href = "https://chromebook-guide.github.io/cryptosmite";
   } else if (document.getElementById("curVersion").value >= 112) {
     window.location.href = "https://chromebook-guide.github.io/badrecovery"
   }
   if (document.getElementById(curVersion).value >= 125) {
     alert("Wait for ICARUS.")
-  } else if (waysToRoot.includes("SH1MMER") && document.getElementById(curVersion).value >= 125) {
+  } else if (waysToRoot.includes("SH1mmer") && document.getElementById(curVersion).value >= 125) {
     window.location.href = "https://chromebook-guide.github.io/pencilmethod" //last resort for repair shops or skids looking to unenroll chromebooks.
   }
   if (waysToRoot.includes("80")) {
     window.location.href = "https://chromebook-guide.github.io/v81";
-  } else if (waysToRoot.includes("SH1MMER")) {
+  } else if (waysToRoot.includes("SH1mmer")) {
     // v81 provides more options then sh1mmer, sh1mmer is more of a second-best option here
     window.location.href = "https://chromebook-guide.github.io/sh1mmer"
   } else if (waysToRoot.includes("87")) {

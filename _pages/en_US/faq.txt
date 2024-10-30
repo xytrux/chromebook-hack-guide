@@ -13,13 +13,13 @@ Yes, your administrator can see that you've unenrolled. More specifically - your
 {% capture compat %}
 <summary><u>Are there any risks of permanently damaging my Chromebook?</u></summary>
 
-Short answer: No. Slightly longer answer: Not unless you fuck up really, *really* badly. (if you do, consider yourself to be a honorary skid) Basically, just follow the instructions and you'll be fine.
+Short answer: No. Slightly longer answer: Not unless you fuck up really, *really* badly. Basically, just follow the instructions and you'll be fine.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>
 
 {% capture compat %}
 <summary><u>Help! I got a "ChromeOS is Missing or Damaged" screen and don't know what to do!</u></summary>
 
-Use a recovery drive. If ChromeOS refuses to load it, check that you got the right board on [Chrome100](https://chrome100.dev/). If that doesn't work, make sure that this screen isn't intentional, as it is in fakemurk. If none of that works, consult (here)[https://www.youtube.com/watch?v=GU4Hw-xbBNo] for instructions on how to fix it.
+Use a recovery drive. If ChromeOS refuses to load it, check that you got the right board on [Chrome100](https://chrome100.dev/). If that doesn't work, make sure that this screen isn't intentional, as it is in fakemurk.
 {% endcapture %}
 <details>{{ compat | markdownify }}</details>

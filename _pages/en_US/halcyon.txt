@@ -24,7 +24,7 @@ After a few minutes, the script should output a success message and you'll be go
 
 ## Section II - Flashing your Image and Booting
 
-By this point, you should have the steps down. Just flash the image that you just modified identically to how you flashed SH1MMER previously. From here, the steps differ significantly.
+By this point, you should have the steps down. Just flash the image that you just modified identically to how you flashed SH1mmer previously. From here, the steps differ significantly.
 
 Enter recovery mode (`Esc+Refresh+Power`) and enable developer mode (`Ctrl+D` and `Enter`). At the "developer mode blocked" screen, enter recovery mode again (`Esc+Refresh+Power`). At this point, you should plug in your RecoMod drive and begin to spam the `E` key on the keyboard. This is a critical step and cannot be skipped. RecoMod will begin a 5-minute wait sequence (you can watch it tick down if you like, it's in the top left hand corner of the screen), at which point you can stop spamming the `E` key. Once the timer nears the end, begin spamming the `E` key again. After a few seconds, a boot screen will show and you will be presented with a menu.
 

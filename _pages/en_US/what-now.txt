@@ -80,12 +80,15 @@ If you installed AuroraStore, you can search up "LibreTorrent". LibreTorrent is 
 Using Crouton, you can swap over to a full Linux desktop running XFCE. Within it, you can install firefox (`sudo apt install firefox-esr`) and then set the proxy settings to point towards wssocks (`127.0.0.1` on port `1080`).
 
 ## Install Windows/MacOS/Linux with FULL UEFI firmware
+
 Disable WP using any of the methods for your board, then flash FULL ROM firmware using the MrChromebox script.
 
-Now, simply flash the iso of your OS on to your usb and plug it in. Simple right?
-Only issue is Windows needs drivers. LOTTTS of them. Go [here](https://coolstar.org/chromebook/windows-install.html) for more info. If you have money to spare,
-simply buy them from CoolStar.
+Now, simply flash the ISO of your OS on to your usb and plug it in.
 
-..or you can sail the high seas. good luck trying to find them lmao.
+### For you Windows chumps:
 
-Please note that MacOS booting is only possible on 10th gen and below Intel Processors, which are not Celerons, Pentiums or Atoms. Consult the [OpenCore guide](https://dortania.github.io/OpenCore-Install-Guide/) for more.
+Windows needs drivers. Lots of them! Beware that this takes up a lot of space, too, so it might not be best for your 20gb EMMC Chromebook. If you still insist on running Windows for some horrible reason, go [here](https://coolstar.org/chromebook/windows-install.html) for more info. If you have money to spare, simply buy them from CoolStar.
+
+...or you can sail the high seas. Good luck finding them.
+
+Please note that running MacOS is only possible on 10th gen and below Intel Processors, which are not Celerons, Pentiums or Atoms. Consult the [OpenCore guide](https://dortania.github.io/OpenCore-Install-Guide/) for more (but why would you even want to run MacOS? blink twice if you're doing this against your will).

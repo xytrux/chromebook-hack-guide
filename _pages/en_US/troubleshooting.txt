@@ -12,52 +12,49 @@ Seriously, how did you run into an issue *here*? Make an issue on the GitHub rep
 
 ### Help! I don't have a personal computer with admin permissions and the Chromebook Recovery Utility extension is blocked!
 
-Either get a friend to help you or else you're out of luck. Sorry, skid.
+Either get a friend to help you or else you're SOL.
 
 ### I don't have a USB drive, can you send one to me?
 
-Go out and buy one. While you're at it, touch some grass.
+No.
 
 ### My USB drive is less than 8gb. Will it still work?
 
-Yes. Use SH1MMER legacy instead.
+Yes. Use SH1mmer legacy instead.
 
 ### Recovery outputs something about the drive being outdated
 
-This means that, at some point, you've updated to v112 or higher. Use BadRecovery if under 125.
+This means that, at some point, you've updated to v112 or higher. Use BadRecovery if your version is under v125.
 
 ## Root Escalation (>v101)
 
-### No red prompt appears after running the root exploit
+### No red prompt appears after running the root exploit!
 
-Womp Womp. Recover again. Try again. Do better next time.
+You're SOL. Recover again and try again.
 
-### `set_cellular_ppp` outputs "No Cellular Service Exists"
+### `set_cellular_ppp` outputs "No Cellular Service Exists"!
 
 Either you're on a version where the `set_cellular_ppp` bug is patched (v101 or higher) or something else got messed up. Try downgrading again.
 
 ## Root Escalation (v81 - Kiosk)
 
-### I can't find my USB drive to load CHRWN from
+### I can't find my USB drive to load CHRWN from!
 
-Reboot. Try again.
+Reboot and try again. If it still doesn't work, you're (drumroll please...) SOL!
 
 ## Sh1mmer
 
-### "This USB drive does not contain ChromeOS" upon trying to boot the shim
+### "This USB drive does not contain ChromeOS" appears upon trying to boot the shim!
 
-Either you've upgraded past v112 (at which point sh1mmer is patched) or you downloaded the shim for the wrong board.
+Either you've upgraded past v112 (at which point SH1mmer is patched) or you downloaded the shim for the wrong board.
 
+### When I try to boot SH1mmer, it says I'm using a unoffical image!
 
-### When I do SH1MMER, it says im using a unoffical image.
-
-HOW. HOW DO YOU CONFUSE A RECOVERY IMAGE WITH A SHIM???? WHY..
-
-..speaking of which, you should've read the instructions for SH1MMER.
+You used a recovery image instead of a shim. Honestly, I'm not even going to tell you that you're SOL this time.
 
 ## LtBEEF
 
-### The script isn't running on any page.
+### The script isn't running on any page!
 
 Either the site that LtBEEF is being loaded from is blocked, in which case you're on a version where LtBEEF is patched, or you're on the wrong page. Keep in mind that LtBEEF needs to be run on:
 
@@ -65,7 +62,7 @@ Either the site that LtBEEF is being loaded from is blocked, in which case you'r
 
 ## Murkmod
 
-### Installing/Updating error: Read-only Filesystem
+### While Installing/Updating: Read-only Filesystem
 
 Try recovering, unenrolling, then fakemurking and murkmodding again.
 
