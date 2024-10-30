@@ -12,9 +12,9 @@ Before starting this guide, we first have to check some key information about yo
 1. Find the line that says "Platform" and then find the text that says `stable-channel`. Find the one-word board codename after that. This is your *board name*. Save it off somewhere, you'll need it in a bit.
 
     ![]({{ "./images/find-board-stable-channel.png" | absolute_url }})
-    {: .notice--info}
+{: .notice--info}
 
-If chrome://version is blocked, just hold down `Esc+Refresh+Power` until the recovery screen shows up, and then press `Tab`. At the very top of the text that appears should be your board name.
+If chrome://version is blocked, open Settings, go to About ChromeOS, click Additional details, click the copy icon, and paste the text into an editor to view the details.
 {: .notice--info}
 
 #### Section II - Crosh Checks
