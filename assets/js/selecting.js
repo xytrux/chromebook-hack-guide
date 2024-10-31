@@ -64,14 +64,14 @@ function redirect() {
   var waysToRoot = canRootBoard(document.getElementById("board").value);
   console.log(waysToRoot);
   if (waysToRoot.includes("SH1mmer") && document.getElementById("curVersion").value >= 111) {
-    window.location.href = "https://chromebook-guide.github.io/cryptosmite";
+    window.location.href = "https://chromebook-guide.github.io/badrecovery";
   } else if (document.getElementById("curVersion").value >= 112) {
     window.location.href = "https://chromebook-guide.github.io/badrecovery"
   }
   if (document.getElementById(curVersion).value >= 125) {
     alert("Wait for ICARUS.")
   } else if (waysToRoot.includes("SH1mmer") && document.getElementById(curVersion).value >= 125) {
-    window.location.href = "https://chromebook-guide.github.io/pencilmethod" //last resort for repair shops or skids looking to unenroll chromebooks.
+    alert("No exploits are availiable for your version yet.");
   }
   if (waysToRoot.includes("80")) {
     window.location.href = "https://chromebook-guide.github.io/v81";
