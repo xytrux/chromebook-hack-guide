@@ -1,0 +1,537 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Lilac (Device Policy Editing) - Chromebook Exploit Guide</title>
+<meta name="description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+  <meta name="author" content="rainestorme">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Chromebook Exploit Guide">
+<meta property="og:title" content="Lilac (Device Policy Editing)">
+<meta property="og:url" content="https://chromebook-guide.github.io/lilac.html">
+
+
+  <meta property="og:description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://chromebook-guide.github.io/lilac.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Chromebook Exploit Guide",
+      "url": "https://chromebook-guide.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Chromebook Exploit Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "This website uses cookies to display the current guide progress on the sidebar and otherwise enhance the site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          Chromebook Exploit Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/troubleshooting">Troubleshooting</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/lilac.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/es_ES/lilac.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/de_DE/lilac.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fr_FR/lilac.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/it_IT/lilac.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/nl_NL/lilac.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_BR/lilac.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_PT/lilac.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ru_RU/lilac.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_CN/lilac.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_TW/lilac.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pl_PL/lilac.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/tr_TR/lilac.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/vi_VN/lilac.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ca_ES/lilac.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/el_GR/lilac.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/he_IL/lilac.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sv_SE/lilac.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ko_KR/lilac.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/no_NO/lilac.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ja_JP/lilac.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ar_SA/lilac.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/hu_HU/lilac.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ro_RO/lilac.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sr_SP/lilac.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/af_ZA/lilac.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ms_MY/lilac.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fi_FI/lilac.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/da_DK/lilac.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/uk_UA/lilac.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/cs_CZ/lilac.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/en_PT/lilac.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Overall Progress</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/get-started'>Get Started</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Lilac (Device Policy Editing)">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Lilac (Device Policy Editing)
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a></li>
+  <li><a href="#section-i---install-dependencies" id="markdown-toc-section-i---install-dependencies">Section I - Install Dependencies</a></li>
+  <li><a href="#section-ii---build-boringssl" id="markdown-toc-section-ii---build-boringssl">Section II - Build Boringssl</a></li>
+  <li><a href="#section-iii---build-the-protocol-buffers" id="markdown-toc-section-iii---build-the-protocol-buffers">Section III - Build the Protocol Buffers</a></li>
+  <li><a href="#section-iv---compile-lilac" id="markdown-toc-section-iv---compile-lilac">Section IV - Compile Lilac</a></li>
+  <li><a href="#section-v---extract-device-policy" id="markdown-toc-section-v---extract-device-policy">Section V - Extract Device Policy</a></li>
+  <li><a href="#section-vi---modify-device-policy" id="markdown-toc-section-vi---modify-device-policy">Section VI - Modify Device Policy</a></li>
+  <li><a href="#section-vii---replace-policy-set-launch-flags-and-swap-release-channel" id="markdown-toc-section-vii---replace-policy-set-launch-flags-and-swap-release-channel">Section VII - Replace Policy, Set Launch Flags, and Swap Release Channel</a></li>
+  <li><a href="#section-viii---overwrite-policies-on-device" id="markdown-toc-section-viii---overwrite-policies-on-device">Section VIII - Overwrite Policies On-Device</a></li>
+  <li><a href="#section-ix---revert-changes" id="markdown-toc-section-ix---revert-changes">Section IX - Revert Changes</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>A linux box running Ubuntu - generally, you can use Gitpod to build lilac, but you could also run these instructions on a local Linux box. For a URL that’s already set up, see <a href="https://gitpod.io/#https://github.com/MercuryWorkshop/lilac">here</a></li>
+</ul>
+
+<h2 id="section-i---install-dependencies">Section I - Install Dependencies</h2>
+
+<p>Run the following command:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>protobuf-compiler
+</code></pre></div></div>
+
+<p>If you’re not building lilac on gitpod, then run the following commands:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/MercuryWorkshop/lilac.git
+<span class="nb">cd </span>lilac
+</code></pre></div></div>
+
+<h2 id="section-ii---build-boringssl">Section II - Build Boringssl</h2>
+
+<p>Run the following commands:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>boringssl
+<span class="nb">mkdir</span> <span class="nt">-p</span> build
+<span class="nb">cd </span>build
+cmake <span class="nt">-DCMAKE_POSITION_INDEPENDENT_CODE</span><span class="o">=</span>TRUE ..
+make
+make <span class="nb">install </span><span class="nv">DESTDIR</span><span class="o">=</span>../install
+<span class="nb">cd</span> ../../
+</code></pre></div></div>
+
+<h2 id="section-iii---build-the-protocol-buffers">Section III - Build the Protocol Buffers</h2>
+
+<p>Run the following command:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>protoc <span class="nt">-I</span> proto proto/<span class="k">*</span> <span class="nt">--cpp_out</span><span class="o">=</span><span class="nb">.</span>
+</code></pre></div></div>
+
+<h2 id="section-iv---compile-lilac">Section IV - Compile Lilac</h2>
+
+<p>Before proceeding, consider if you want your device background image to be overridden with a patched version. If not, modify line 75 to contain the following:</p>
+
+<pre><code class="language-cc">const std::string DWIP_MDWIV = ""; // DeviceWallpaperImageProto.mutable_device_wallpaper_image
+</code></pre>
+
+<p>Run:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div></div>
+
+<h2 id="section-v---extract-device-policy">Section V - Extract Device Policy</h2>
+
+<p>Open a root shell through mush. Run the following commands to copy your device policy to your Downloads folder:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> /home/chronos/user/Downloads/devicesettings
+<span class="nb">chmod </span>777 /home/chronos/user/Downloads/devicesettings
+<span class="nb">cp</span> /var/lib/devicesettings/<span class="k">*</span> /home/chronos/user/Downloads/devicesettings/
+</code></pre></div></div>
+
+<h2 id="section-vi---modify-device-policy">Section VI - Modify Device Policy</h2>
+
+<p>Copy all the files in <code class="language-plaintext highlighter-rouge">/home/chronos/user/Downloads/devicesettings</code> to your Linux box. If using Gitpod, just create a new folder called <code class="language-plaintext highlighter-rouge">devicesettings</code> and drag and drop the files there.</p>
+
+<p>Then, find the file name with the lowest number after <code class="language-plaintext highlighter-rouge">policy</code> - like <code class="language-plaintext highlighter-rouge">policy.25</code> or <code class="language-plaintext highlighter-rouge">policy.26</code> and remember that filename.</p>
+
+<p>Now, run the following commands to patch the policy with Lilac:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>devicesettings
+../lilac patch policy.X
+</code></pre></div></div>
+
+<h2 id="section-vii---replace-policy-set-launch-flags-and-swap-release-channel">Section VII - Replace Policy, Set Launch Flags, and Swap Release Channel</h2>
+
+<p>Download the files to your downloads folder in a directory called <code class="language-plaintext highlighter-rouge">newdevicesettings</code> and run the following command in a root shell to configure your Chromebook for the exploit:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/CHROMEOS_RELEASE_TRACK=stable-channel/CHROMEOS_RELEASE_TRACK=testimage-channel/g'</span> /etc/lsb-release
+</code></pre></div></div>
+
+<p>Now, we need to relaunch /opt/google/chrome/chrome with the required launch flag, <code class="language-plaintext highlighter-rouge">--disable-policy-key-verification</code>. To do so, we’ll use a method originally found by TitaniumNetwork, which in effect is a simple bash script to kill and relaunch the process with new command-line flags.</p>
+
+<p>First, find your command-line arguments on <code class="language-plaintext highlighter-rouge">chrome://version</code>. Copy the entire string, as missing flags could cause bugs. Then, create a new file and edit it with <code class="language-plaintext highlighter-rouge">vi</code>, like this:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
+<span class="nb">touch </span>relaunch_with_flags.sh
+vi relaunch_with_flags.sh
+</code></pre></div></div>
+
+<p>Inside of vim, add the following content (press <code class="language-plaintext highlighter-rouge">i</code> before typing anything to enter insert mode):</p>
+
+<pre><code class="language-txt">pkill -9 chrome
+</code></pre>
+
+<p>Create a new line and paste the entire string you got from <code class="language-plaintext highlighter-rouge">chrome://version</code>, but with <code class="language-plaintext highlighter-rouge">--disable-policy-key-verification</code> added to the end. Press <code class="language-plaintext highlighter-rouge">Esc</code>, then type <code class="language-plaintext highlighter-rouge">wq</code> and press <code class="language-plaintext highlighter-rouge">Enter</code>. Vi should exit and you should be good to run the script:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash relaunch_with_flags.sh
+</code></pre></div></div>
+
+<p>Sign back in and you’ll be good to move on to the next step.</p>
+
+<h2 id="section-viii---overwrite-policies-on-device">Section VIII - Overwrite Policies On-Device</h2>
+
+<p>Download the policies (and the <code class="language-plaintext highlighter-rouge">owner.key</code> file) into a new folder in your Downloads directory named <code class="language-plaintext highlighter-rouge">newdevicesettings</code> and run the following command in a root shell:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> /home/chronos/user/Downloads/newdevicesettings/<span class="k">*</span> /var/lib/devicesettings
+</code></pre></div></div>
+
+<h2 id="section-ix---revert-changes">Section IX - Revert Changes</h2>
+
+<p>When you’re done enjoying modified device policies, you can revert the changes by:</p>
+
+<ul>
+  <li>Running the following command:</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/CHROMEOS_RELEASE_TRACK=testimage-channel/CHROMEOS_RELEASE_TRACK=stable-channel/g'</span> /etc/lsb-release
+</code></pre></div></div>
+
+<ul>
+  <li>Copying the original policy files back to their original location</li>
+  <li>Restarting your device</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/chromebook-guide/chromebook-guide.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2024 Chromebook Exploit Guide. - <a href="site-navigation">Privacy Policy</a> - <a href="privacy-policy"></a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

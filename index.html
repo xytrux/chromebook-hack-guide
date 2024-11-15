@@ -1,0 +1,382 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Chromebook Exploit Guide - Chromebook Exploit Guide</title>
+<meta name="description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+  <meta name="author" content="rainestorme">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Chromebook Exploit Guide">
+<meta property="og:title" content="Chromebook Exploit Guide">
+<meta property="og:url" content="https://chromebook-guide.github.io/">
+
+
+  <meta property="og:description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+
+  <meta property="og:image" content="https://chromebook-guide.github.io/images/samsung_chromebook_3_official-58149740.jpeg">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://chromebook-guide.github.io/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Chromebook Exploit Guide",
+      "url": "https://chromebook-guide.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Chromebook Exploit Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "This website uses cookies to display the current guide progress on the sidebar and otherwise enhance the site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--splash">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          Chromebook Exploit Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/troubleshooting">Troubleshooting</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/">English</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/es_ES/">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/de_DE/">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fr_FR/">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/it_IT/">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/nl_NL/">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_BR/">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_PT/">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ru_RU/">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_CN/">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_TW/">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pl_PL/">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/tr_TR/">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/vi_VN/">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ca_ES/">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/el_GR/">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/he_IL/">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sv_SE/">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ko_KR/">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/no_NO/">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ja_JP/">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ar_SA/">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/hu_HU/">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ro_RO/">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sr_SP/">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/af_ZA/">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ms_MY/">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fi_FI/">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/da_DK/">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/uk_UA/">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/cs_CZ/">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/en_PT/">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #5e616c; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/samsung_chromebook_3_official-58149740.jpeg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Chromebook Exploit Guide
+
+        
+      </h1>
+      
+        <p class="page__lead">An exploit guide and wiki for a wide variety of chromebook exploits and tools
+</p>
+      
+      
+
+
+      
+        <p><a href="/get-started" class="btn btn--light-outline btn--large">Get Started</a></p>
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Chromebook Exploit Guide">
+    <meta itemprop="description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <hr>
+
+      
+      
+
+      
+
+      <hr>
+      <p class="notice--info">Thoroughly read all of the introductory pages (including this one!) before proceeding.</p>
+
+<p class="notice--warning">Warning: Downgrading through the typical recovery method is patched on v112 and over for non-sh1mmerable boards. You can still follow this guide on almost any hardware, but you’re limited to E-Halcyon if you aren’t willing to take apart your device.</p>
+
+<h2 id="what-does-this-guide-do-and-install">What does this guide do and install?</h2>
+
+<p>This guide will:</p>
+<ul>
+  <li>Downgrade (if neccecary) and obtain root access on your Chromebook</li>
+  <li>Unenroll your Chromebook from management or set up a temporary sandboxed environment to the same effect
+    <ul>
+      <li>Your device will be able to be used as a personal Chromebook, behaving as a normal device would behave - without blocking extensions like Securly and GoGuardian</li>
+    </ul>
+  </li>
+  <li>Run fakemurk to re-enroll your device (to avoid arousing suspicion with administrators) but still allow developer-mode functionality to run
+    <ul>
+      <li>Your device will operate like an enrolled one, except have extensions of your choice disabled and have a modified user policy installed</li>
+    </ul>
+  </li>
+  <li>Install murkmod to allow extra functionality and community-made plugins to be installed onto your Chromebook</li>
+</ul>
+
+<h2 id="what-are-the-risks-of-following-this-guide">What are the risks of following this guide?</h2>
+
+<p>If you choose not to run fakemurk, then your administrator will be able to see your “Last Device Sync Date” slipping into the past. If they become suspicious enough, they may choose to physically investigate, then they would discover that you had unenrolled.</p>
+
+<p>If you do indeed run fakemurk, then your administrator will see that the “Last Device Sync Date” will constantly be updated, but there will be one “Developer Mode Enabled” alert on the device. However, the device will report that it is not currently in developer mode, and if your sysadmin is incompetent enough (as mine is) then you will be completely fine.</p>
+
+<hr />
+
+<h3 class="notice--primary" id="continue-to-get-started">Continue to <a href="get-started">Get Started</a></h3>
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/chromebook-guide/chromebook-guide.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2024 Chromebook Exploit Guide. - <a href="site-navigation">Privacy Policy</a> - <a href="privacy-policy"></a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

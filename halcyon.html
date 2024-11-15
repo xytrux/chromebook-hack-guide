@@ -1,0 +1,470 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>E-Halcyon - Chromebook Exploit Guide</title>
+<meta name="description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+  <meta name="author" content="rainestorme">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Chromebook Exploit Guide">
+<meta property="og:title" content="E-Halcyon">
+<meta property="og:url" content="https://chromebook-guide.github.io/halcyon.html">
+
+
+  <meta property="og:description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://chromebook-guide.github.io/halcyon.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Chromebook Exploit Guide",
+      "url": "https://chromebook-guide.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Chromebook Exploit Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "This website uses cookies to display the current guide progress on the sidebar and otherwise enhance the site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          Chromebook Exploit Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/troubleshooting">Troubleshooting</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/halcyon.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/es_ES/halcyon.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/de_DE/halcyon.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fr_FR/halcyon.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/it_IT/halcyon.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/nl_NL/halcyon.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_BR/halcyon.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_PT/halcyon.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ru_RU/halcyon.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_CN/halcyon.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_TW/halcyon.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pl_PL/halcyon.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/tr_TR/halcyon.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/vi_VN/halcyon.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ca_ES/halcyon.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/el_GR/halcyon.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/he_IL/halcyon.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sv_SE/halcyon.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ko_KR/halcyon.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/no_NO/halcyon.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ja_JP/halcyon.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ar_SA/halcyon.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/hu_HU/halcyon.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ro_RO/halcyon.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sr_SP/halcyon.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/af_ZA/halcyon.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ms_MY/halcyon.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fi_FI/halcyon.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/da_DK/halcyon.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/uk_UA/halcyon.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/cs_CZ/halcyon.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/en_PT/halcyon.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Overall Progress</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/get-started'>Get Started</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="E-Halcyon">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">E-Halcyon
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a></li>
+  <li><a href="#section-i---getting-a-recomod-image" id="markdown-toc-section-i---getting-a-recomod-image">Section I - Getting a RecoMod Image</a></li>
+  <li><a href="#section-ii---flashing-your-image-and-booting" id="markdown-toc-section-ii---flashing-your-image-and-booting">Section II - Flashing your Image and Booting</a></li>
+  <li><a href="#section-iii---booting-or-installing-e-halcyon" id="markdown-toc-section-iii---booting-or-installing-e-halcyon">Section III - Booting or Installing E-Halcyon</a></li>
+  <li><a href="#section-iv---semi-tethered-restrictions" id="markdown-toc-section-iv---semi-tethered-restrictions">Section IV - Semi-Tethered Restrictions</a></li>
+  <li><a href="#section-v---finished" id="markdown-toc-section-v---finished">Section V - Finished!</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>A USB drive, 8gb or larger</li>
+  <li>A Linux system to build E-Halcyon</li>
+</ul>
+
+<h2 id="section-i---getting-a-recomod-image">Section I - Getting a RecoMod Image</h2>
+
+<p>First, you’ll need to head to <a href="https://chrome100.dev/">chrome100</a> and find a v107 recovery image for your board. Once you have it, you need to download it on your Linux system (probably with <code class="language-plaintext highlighter-rouge">wget</code> or <code class="language-plaintext highlighter-rouge">curl</code>) and run the following commands, replacing <code class="language-plaintext highlighter-rouge">/path/to/recovery/image.bin</code> with the exact path to your (unzipped) recovery image:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/MercuryWorkshop/RecoMod
+<span class="nb">cd </span>RecoMod
+<span class="nb">chmod</span> +x recomod.sh
+<span class="nb">sudo</span> ./recomod.sh <span class="nt">-i</span> /path/to/recovery/image.bin <span class="nt">--halcyon</span> <span class="nt">--rw_legacy</span>
+</code></pre></div></div>
+
+<p>After a few minutes, the script should output a success message and you’ll be good to continue.</p>
+
+<h2 id="section-ii---flashing-your-image-and-booting">Section II - Flashing your Image and Booting</h2>
+
+<p>By this point, you should have the steps down. Just flash the image that you just modified identically to how you flashed SH1mmer previously. From here, the steps differ significantly.</p>
+
+<p>Enter recovery mode (<code class="language-plaintext highlighter-rouge">Esc+Refresh+Power</code>) and enable developer mode (<code class="language-plaintext highlighter-rouge">Ctrl+D</code> and <code class="language-plaintext highlighter-rouge">Enter</code>). At the “developer mode blocked” screen, enter recovery mode again (<code class="language-plaintext highlighter-rouge">Esc+Refresh+Power</code>). At this point, you should plug in your RecoMod drive and begin to spam the <code class="language-plaintext highlighter-rouge">E</code> key on the keyboard. This is a critical step and cannot be skipped. RecoMod will begin a 5-minute wait sequence (you can watch it tick down if you like, it’s in the top left hand corner of the screen), at which point you can stop spamming the <code class="language-plaintext highlighter-rouge">E</code> key. Once the timer nears the end, begin spamming the <code class="language-plaintext highlighter-rouge">E</code> key again. After a few seconds, a boot screen will show and you will be presented with a menu.</p>
+
+<h2 id="section-iii---booting-or-installing-e-halcyon">Section III - Booting or Installing E-Halcyon</h2>
+
+<p>Select <code class="language-plaintext highlighter-rouge">activate halcyon environment</code> in the menu with the arrow keys and press <code class="language-plaintext highlighter-rouge">Enter</code>. You have a few choices from here:</p>
+
+<ul>
+  <li>Install semi-tethered E-Halcyon
+    <ul>
+      <li>Still requires a USB drive to boot, but allows the drive to be disconnected after initial bootstrapping</li>
+    </ul>
+  </li>
+  <li>Boot E-Halcyon straight from the drive
+    <ul>
+      <li>Requires the drive to be plugged in at all times or the system will crash</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If you want to install E-Halcyon, navigate to <code class="language-plaintext highlighter-rouge">Install halcyon semi-tethered</code> and press enter. Wait for it to finish (it can take up to 5 minutes) and then select <code class="language-plaintext highlighter-rouge">activate halcyon environment</code> and <code class="language-plaintext highlighter-rouge">Boot halcyon semi-tethered</code>. Your system should reboot and you will be booted into a fully unenrolled environment.</p>
+
+<p>Otherwise, select <code class="language-plaintext highlighter-rouge">Boot halcyon tethered</code> and your system will reboot into a one-time fully unenrolled environment that you can use as much as you want, as long as you don’t unplug your USB drive.</p>
+
+<h2 id="section-iv---semi-tethered-restrictions">Section IV - Semi-Tethered Restrictions</h2>
+
+<p>If you didn’t install E-Halcyon in semi-tethered mode, this section doesn’t apply to you. You can skip it and get on with your day.</p>
+
+<p>Semi-tethered halcyon comes with some restrictions:</p>
+<ul>
+  <li>Booting ChromeOS normall will result in a “ChromeOS is missing or damaged” screen</li>
+  <li>The basic procedure (get to the devmode block screen, enter reco mode, spam E while booting from RecoMod drive) will still be required to boot the system every time, even subsequent to installing it to the disk, although the 5-minute wait will be omitted</li>
+</ul>
+
+<h2 id="section-v---finished">Section V - Finished!</h2>
+
+<p>You are now the proud owner of a Halcyon-powered Chromebook or other ChromeOS device! Congratulations!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/chromebook-guide/chromebook-guide.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2024 Chromebook Exploit Guide. - <a href="site-navigation">Privacy Policy</a> - <a href="privacy-policy"></a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>

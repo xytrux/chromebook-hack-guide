@@ -1,0 +1,493 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>SH1mmer Unenrollment - Chromebook Exploit Guide</title>
+<meta name="description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+  <meta name="author" content="rainestorme">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Chromebook Exploit Guide">
+<meta property="og:title" content="SH1mmer Unenrollment">
+<meta property="og:url" content="https://chromebook-guide.github.io/sh1mmer.html">
+
+
+  <meta property="og:description" content="An exploit guide and wiki for a wide variety of chromebook exploits and tools">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://chromebook-guide.github.io/sh1mmer.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Chromebook Exploit Guide",
+      "url": "https://chromebook-guide.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Chromebook Exploit Guide Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=PYEmwKvQAx">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png?v=PYEmwKvQAx" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-194x194.png?v=PYEmwKvQAx" sizes="194x194">
+<link rel="icon" type="image/png" href="/images/android-chrome-192x192.png?v=PYEmwKvQAx" sizes="192x192">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png?v=PYEmwKvQAx" sizes="16x16">
+<link rel="manifest" href="/images/manifest.json?v=PYEmwKvQAx">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=PYEmwKvQAx" color="#2E3440">
+<link rel="shortcut icon" href="/images/favicon.ico?v=PYEmwKvQAx">
+<meta name="apple-mobile-web-app-title" content="Guide">
+<meta name="application-name" content="Guide">
+<meta name="msapplication-TileColor" content="#2E3440">
+<meta name="msapplication-TileImage" content="/images/mstile-144x144.png?v=PYEmwKvQAx">
+<meta name="msapplication-config" content="/images/browserconfig.xml?v=PYEmwKvQAx">
+<meta name="theme-color" content="#2E3440">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#2e3440"
+    },
+    "button": {
+      "background": "#60818f"
+    }
+  },
+  "theme": "edgeless",
+  "position": "top",
+  "static": true,
+  "content": {
+    "message": "This website uses cookies to display the current guide progress on the sidebar and otherwise enhance the site."
+  }
+})});
+</script>
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <!-- <a class="site-title" href="/">
+          Chromebook Exploit Guide
+          
+        </a>
+      -->
+        <ul class="visible-links">
+          <!-- modified to use multilang, guide-specific -->
+          
+          
+          
+          
+          
+          
+            
+              <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">Home</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/faq">FAQ</a></li>
+            
+          
+            
+              <li class="masthead__menu-item"><a href="/troubleshooting">Troubleshooting</a></li>
+            
+          
+          <!-- end guide specific -->
+        </ul>
+        
+        <!-- completely redo hidden links for multilang, guide-specific -->
+        <ul class="hidden-links links-menu hidden"></ul>
+        <ul class="hidden-links lang-menu hidden">
+          
+          
+          
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sh1mmer.html">English</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/es_ES/sh1mmer.html">Español</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/de_DE/sh1mmer.html">Deutsch</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fr_FR/sh1mmer.html">Français</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/it_IT/sh1mmer.html">Italiano</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/nl_NL/sh1mmer.html">Nederlands</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_BR/sh1mmer.html">Português do Brasil</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pt_PT/sh1mmer.html">Português (Portugal)</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ru_RU/sh1mmer.html">Русский</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_CN/sh1mmer.html">简体中文</a></li>
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/zh_TW/sh1mmer.html">繁體中文</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/pl_PL/sh1mmer.html">Polski</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/tr_TR/sh1mmer.html">Türkçe</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/vi_VN/sh1mmer.html">Tiếng Việt</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ca_ES/sh1mmer.html">Català</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/el_GR/sh1mmer.html">Ελληνικά</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/he_IL/sh1mmer.html">עברית‎</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sv_SE/sh1mmer.html">Svenska</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ko_KR/sh1mmer.html">한국어</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/no_NO/sh1mmer.html">Norsk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ja_JP/sh1mmer.html">日本語</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ar_SA/sh1mmer.html">اللغة العربية</a></li> -->
+          <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/hu_HU/sh1mmer.html">Magyar</a></li>
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ro_RO/sh1mmer.html">Română</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/sr_SP/sh1mmer.html">Српски</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/af_ZA/sh1mmer.html">Afrikaans</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/ms_MY/sh1mmer.html">Bahasa Melayu</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/fi_FI/sh1mmer.html">Suomi</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/da_DK/sh1mmer.html">Dansk</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/uk_UA/sh1mmer.html">Українська</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/cs_CZ/sh1mmer.html">Čeština</a></li> -->
+          <!-- <li class="masthead__menu-item"><a href="https://chromebook-guide.github.io/en_PT/sh1mmer.html">Pirate English</a></li> -->
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <button class="greedy-nav__toggle_lang"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  <!-- 
+  <div class="sidebar sticky">
+  
+  
+    
+    
+  
+  </div>
+
+-->
+
+
+
+<div class="sidebar sticky" style="display: none;">
+  
+
+
+
+
+
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    <li>
+      <span class="nav__sub-title">Overall Progress</span>
+      <ol>
+        
+          
+            <li style="display: none;" data-name="home"><a href='/'>Home</a></li>
+          
+        
+          
+            <li style="display: none;" data-name="get-started"><a href='/get-started'>Get Started</a></li>
+          
+        
+      </ol>
+    </li>
+  </ul>
+</nav>
+</div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="SH1mmer Unenrollment">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">SH1mmer Unenrollment
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+
+        <hr>
+
+        
+        
+
+        
+
+        <hr>
+
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a></li>
+  <li><a href="#section-i---download-a-raw-shim" id="markdown-toc-section-i---download-a-raw-shim">Section I - Download a Raw Shim</a></li>
+  <li><a href="#section-ii---add-the-sh1mmer-payload-beautifulworld" id="markdown-toc-section-ii---add-the-sh1mmer-payload-beautifulworld">Section II - Add the SH1mmer payload (BeautifulWorld)</a></li>
+  <li><a href="#section-iii---flash-the-shim" id="markdown-toc-section-iii---flash-the-shim">Section III - Flash the Shim</a>    <ul>
+      <li><a href="#on-nix" id="markdown-toc-on-nix">On *nix</a></li>
+      <li><a href="#on-windows" id="markdown-toc-on-windows">On Windows</a></li>
+      <li><a href="#on-macos" id="markdown-toc-on-macos">On MacOS</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-iv---boot-sh1mmer" id="markdown-toc-section-iv---boot-sh1mmer">Section IV - Boot SH1mmer</a></li>
+  <li><a href="#section-v---unenroll" id="markdown-toc-section-v---unenroll">Section V - Unenroll</a></li>
+  <li><a href="#section-vi---next-steps" id="markdown-toc-section-vi---next-steps">Section VI - Next Steps</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>A USB drive, 8gb or larger, for the modified shim</li>
+</ul>
+
+<p class="notice--danger">Please note that SH1mmer has been patched for later devices, even if they have leaked shims.
+If the shim does not boot on your target device, you may need to use BadRecovery instead.</p>
+
+<h2 id="section-i---download-a-raw-shim">Section I - Download a Raw Shim</h2>
+
+<p>You need to download a raw RMA (Return Merchandise Authorization) shim for your board, which you found earlier. There are only a few of these that have been publicly leaked, and this tool automatically filters out boards that are not supported. You can get a shim at the following sites:</p>
+
+<ul>
+  <li>https://dl.darkn.bio/</li>
+</ul>
+
+<h2 id="section-ii---add-the-sh1mmer-payload-beautifulworld">Section II - Add the SH1mmer payload (BeautifulWorld)</h2>
+
+<p>Visit the <a href="https://sh1mmer.me/builder.html">SH1mmer Web Builder</a> and upload your raw shim. Wait a couple of minutes for it to build, then download the result.</p>
+
+<h2 id="section-iii---flash-the-shim">Section III - Flash the Shim</h2>
+
+<p>Got your built shim? Great! Now, there are some differing instructions depending on your platform.</p>
+
+<h3 id="on-nix">On *nix</h3>
+
+<p class="notice--info">On a ChromeOS device in developer mode, you can also use the following instructions to flash the drive. Otherwise, you can download the <a href="">Chromebook Recovery Utility</a> from the Chrome Webstore and use that to flash the drive. Just click on the top right button in the window and select “Use Local File”, then select your .bin file. This probably won’t work on an enrolled device, but if the extension is unblocked, you can do it entirely on that Chromebook.</p>
+
+<p>Good choice of operating system, by the way. Most distros will come with the <code class="language-plaintext highlighter-rouge">dd</code> utility built-in. If yours doesn’t, then choose a different distro or find a way to flash the recovery image. Run the following command, making sure that you have the correct /dev path to your USB drive and the correct path to your recovery image:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/path/to/sh1mmer.bin <span class="nv">of</span><span class="o">=</span>/dev/sdX
+</code></pre></div></div>
+
+<p>In a few minutes, you should be done, and the command should exit with a 0 exit code.</p>
+
+<h3 id="on-windows">On Windows</h3>
+
+<p>Download <a href="https://rufus.ie/">Rufus</a> and run the executable. Select the .bin file you just downloaded and select your USB drive. Click on flash and follow the prompts. If asked, select “Flash in DD mode”.</p>
+
+<h3 id="on-macos">On MacOS</h3>
+
+<p>Download <a href="https://www.balena.io/etcher">Etcher</a> and run the excutable. Select the .bin file and your USB drive. Click on flash and follow the prompts.</p>
+
+<h2 id="section-iv---boot-sh1mmer">Section IV - Boot SH1mmer</h2>
+
+<p>Boot your Chromebook and press and hold <code class="language-plaintext highlighter-rouge">Esc+Refresh+Power</code> for one second. Then, press <code class="language-plaintext highlighter-rouge">Ctrl+D</code>. At the next screen, press <code class="language-plaintext highlighter-rouge">Refresh+Power</code>. Now, plug in your USB drive and press <code class="language-plaintext highlighter-rouge">Esc+Refresh+Power</code> again. After a short loading screen, the SH1mmer menu should load.</p>
+
+<h2 id="section-v---unenroll">Section V - Unenroll</h2>
+
+<p>Select the first option on the menu and you will be presented with a menu with a variety of payloads and utilities. What we’re after is “Un-Enroll Device”. Select it and reboot your device (<code class="language-plaintext highlighter-rouge">Esc+Refresh</code>).</p>
+
+<p>If you’re continuing to use E-Halcyon, ignore any errors that appear running the utility.</p>
+
+<p>If you were on a version &gt;111 and disabled WP, you will need to run some commands before anything will work. Otherwise, just skip past these pargraphs and unenroll normally. Open a bash shell (Utilities &gt; Bash Shell) and run the following commands:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/share/vboot/bin/set_gbb_flags.sh 0x8090
+</code></pre></div></div>
+
+<p>Reboot, and boot into developer mode (<code class="language-plaintext highlighter-rouge">Ctrl+D</code>). Immediately, powerwash the device (<code class="language-plaintext highlighter-rouge">Ctrl+Alt+Shift+R</code>). After powerwashing, immediately switch into VT2 (Virtual Terminal 2) the second the device begins to boot (<code class="language-plaintext highlighter-rouge">Ctrl+Alt+Forward</code>). If asked for a username, type <code class="language-plaintext highlighter-rouge">root</code> and press enter, and if asked for a password, type <code class="language-plaintext highlighter-rouge">test0000</code>. Now run the following commands, as shown by <a href="https://akkoma.mercurywork.shop/media/8fdafa97b393dd32ba00c94a488e6b653d005b79820ed0ba802174a44c66c649.png">this masterpiece of a meme</a>:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tpm_manager_client take_ownership
+cryptohome <span class="nt">--action</span><span class="o">=</span>remove_firmware_management_parameters
+</code></pre></div></div>
+
+<p>Finally, switch back to OOBE (<code class="language-plaintext highlighter-rouge">Ctrl+Alt+Back</code>) and powerwash (again). After powerwashing, you should be completely unenrolled and be able to use your device without any restrictions.</p>
+
+<p class="notice--danger">Your administrator wil be able to see that your device is “offline”, and you should spend as little time as possible in this state if you are not authorized to be following this tutorial.</p>
+
+<h2 id="section-vi---next-steps">Section VI - Next Steps</h2>
+
+<p class="notice--success">If you’re using E-Halcyon, continue to <a href="halcyon">Booting E-Halcyon</a></p>
+
+<p class="notice--success">If you want to re-enroll but keep your Chromebook unrestricted, continue to <a href="fakemurk">fakemurk</a></p>
+
+<p class="notice--primary">…or you could just keep your device like this, and use it as a personal device. The choice is yours.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/chromebook-guide/chromebook-guide.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+<!--
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    </ul>
+  -->
+</div>
+
+<!-- custom footer, guide specific -->
+
+
+
+<div class="page__footer-copyright">&copy; 2024 Chromebook Exploit Guide. - <a href="site-navigation">Privacy Policy</a> - <a href="privacy-policy"></a> <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.--></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- for guide purposes all caching is removed and is separately built. -->
+
+
+
+
+
+
+
+
+  </body>
+</html>
