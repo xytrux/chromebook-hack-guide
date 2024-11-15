@@ -50,7 +50,7 @@ Instead simply enter recovery normally (`Esc+Refresh+Power`) and plug in your dr
 
 Now, perform an EC reset (`Refresh+Power`).
 
-Please note that your admin can see that your device is offline. If you are not allowed to do this, set your kernver to 0 and reenroll using KVS.
+Please note that your admin can see that your device is offline. If you are not allowed to do this, make sure to fakemurk your device by continuing this guide.
 {: .notice--danger}
 
 ## Section VI - Postmodem
